@@ -25,7 +25,7 @@ Partial Class Form1
         TextBox1 = New TextBox()
         TextBox2 = New TextBox()
         btnLogin = New Button()
-        Panel1 = New Panel()
+        pnlLoginForm = New Panel()
         linkForgot = New LinkLabel()
         Label4 = New Label()
         Label3 = New Label()
@@ -33,8 +33,15 @@ Partial Class Form1
         Label1 = New Label()
         Panel2 = New Panel()
         Label5 = New Label()
-        Panel1.SuspendLayout()
+        pnlForgotCred = New Panel()
+        btnCredReset = New Button()
+        Label8 = New Label()
+        TextBox3 = New TextBox()
+        Label7 = New Label()
+        Label6 = New Label()
+        pnlLoginForm.SuspendLayout()
         Panel2.SuspendLayout()
+        pnlForgotCred.SuspendLayout()
         SuspendLayout()
         ' 
         ' TextBox1
@@ -63,22 +70,22 @@ Partial Class Form1
         btnLogin.Text = "Login"
         btnLogin.UseVisualStyleBackColor = False
         ' 
-        ' Panel1
+        ' pnlLoginForm
         ' 
-        Panel1.BackColor = Color.WhiteSmoke
-        Panel1.Controls.Add(linkForgot)
-        Panel1.Controls.Add(Label4)
-        Panel1.Controls.Add(Label3)
-        Panel1.Controls.Add(Label2)
-        Panel1.Controls.Add(Label1)
-        Panel1.Controls.Add(Panel2)
-        Panel1.Controls.Add(btnLogin)
-        Panel1.Controls.Add(TextBox1)
-        Panel1.Controls.Add(TextBox2)
-        Panel1.Location = New Point(86, 79)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(695, 404)
-        Panel1.TabIndex = 3
+        pnlLoginForm.BackColor = Color.WhiteSmoke
+        pnlLoginForm.Controls.Add(linkForgot)
+        pnlLoginForm.Controls.Add(Label4)
+        pnlLoginForm.Controls.Add(Label3)
+        pnlLoginForm.Controls.Add(Label2)
+        pnlLoginForm.Controls.Add(Label1)
+        pnlLoginForm.Controls.Add(Panel2)
+        pnlLoginForm.Controls.Add(btnLogin)
+        pnlLoginForm.Controls.Add(TextBox1)
+        pnlLoginForm.Controls.Add(TextBox2)
+        pnlLoginForm.Location = New Point(86, 79)
+        pnlLoginForm.Name = "pnlLoginForm"
+        pnlLoginForm.Size = New Size(695, 404)
+        pnlLoginForm.TabIndex = 3
         ' 
         ' linkForgot
         ' 
@@ -157,27 +164,95 @@ Partial Class Form1
         Label5.Text = "Payroll System"
         Label5.TextAlign = ContentAlignment.BottomLeft
         ' 
+        ' pnlForgotCred
+        ' 
+        pnlForgotCred.BackColor = Color.Salmon
+        pnlForgotCred.Controls.Add(btnCredReset)
+        pnlForgotCred.Controls.Add(Label8)
+        pnlForgotCred.Controls.Add(TextBox3)
+        pnlForgotCred.Controls.Add(Label7)
+        pnlForgotCred.Controls.Add(Label6)
+        pnlForgotCred.Location = New Point(86, 79)
+        pnlForgotCred.Name = "pnlForgotCred"
+        pnlForgotCred.Size = New Size(695, 404)
+        pnlForgotCred.TabIndex = 4
+        ' 
+        ' btnCredReset
+        ' 
+        btnCredReset.BackColor = Color.MistyRose
+        btnCredReset.FlatStyle = FlatStyle.Popup
+        btnCredReset.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnCredReset.Location = New Point(37, 316)
+        btnCredReset.Name = "btnCredReset"
+        btnCredReset.Size = New Size(112, 41)
+        btnCredReset.TabIndex = 4
+        btnCredReset.Text = "Submit"
+        btnCredReset.UseVisualStyleBackColor = False
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Helvetica", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label8.ForeColor = Color.Black
+        Label8.Location = New Point(30, 184)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(143, 25)
+        Label8.TabIndex = 3
+        Label8.Text = "Employee ID"
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.Location = New Point(37, 221)
+        TextBox3.Name = "TextBox3"
+        TextBox3.Size = New Size(530, 23)
+        TextBox3.TabIndex = 2
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.ForeColor = Color.Black
+        Label7.Location = New Point(37, 78)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(320, 15)
+        Label7.TabIndex = 1
+        Label7.Text = "Please enter your Employee ID below to verify your identity."
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Helvetica", 27.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.Black
+        Label6.Location = New Point(28, 33)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(452, 45)
+        Label6.TabIndex = 0
+        Label6.Text = "Forgot your credentials?"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FloralWhite
         ClientSize = New Size(883, 561)
-        Controls.Add(Panel1)
+        Controls.Add(pnlLoginForm)
+        Controls.Add(pnlForgotCred)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form1"
         Text = "Login"
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
+        pnlLoginForm.ResumeLayout(False)
+        pnlLoginForm.PerformLayout()
         Panel2.ResumeLayout(False)
+        pnlForgotCred.ResumeLayout(False)
+        pnlForgotCred.PerformLayout()
         ResumeLayout(False)
     End Sub
 
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents btnLogin As Button
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents pnlLoginForm As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -185,5 +260,11 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents linkForgot As LinkLabel
     Friend WithEvents Label5 As Label
+    Friend WithEvents pnlForgotCred As Panel
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents btnCredReset As Button
+    Friend WithEvents Label8 As Label
 
 End Class
