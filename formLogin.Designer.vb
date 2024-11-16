@@ -39,6 +39,7 @@ Partial Class Form1
         TextBox3 = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
+        linkBack = New LinkLabel()
         pnlLoginForm.SuspendLayout()
         Panel2.SuspendLayout()
         pnlForgotCred.SuspendLayout()
@@ -167,6 +168,7 @@ Partial Class Form1
         ' pnlForgotCred
         ' 
         pnlForgotCred.BackColor = Color.Salmon
+        pnlForgotCred.Controls.Add(linkBack)
         pnlForgotCred.Controls.Add(btnCredReset)
         pnlForgotCred.Controls.Add(Label8)
         pnlForgotCred.Controls.Add(TextBox3)
@@ -182,7 +184,7 @@ Partial Class Form1
         btnCredReset.BackColor = Color.MistyRose
         btnCredReset.FlatStyle = FlatStyle.Popup
         btnCredReset.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnCredReset.Location = New Point(37, 316)
+        btnCredReset.Location = New Point(37, 264)
         btnCredReset.Name = "btnCredReset"
         btnCredReset.Size = New Size(112, 41)
         btnCredReset.TabIndex = 4
@@ -229,14 +231,25 @@ Partial Class Form1
         Label6.TabIndex = 0
         Label6.Text = "Forgot your credentials?"
         ' 
+        ' linkBack
+        ' 
+        linkBack.AutoSize = True
+        linkBack.LinkColor = Color.Ivory
+        linkBack.Location = New Point(37, 370)
+        linkBack.Name = "linkBack"
+        linkBack.Size = New Size(50, 15)
+        linkBack.TabIndex = 5
+        linkBack.TabStop = True
+        linkBack.Text = "Go Back"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FloralWhite
         ClientSize = New Size(883, 561)
-        Controls.Add(pnlLoginForm)
         Controls.Add(pnlForgotCred)
+        Controls.Add(pnlLoginForm)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form1"
@@ -266,5 +279,6 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents btnCredReset As Button
     Friend WithEvents Label8 As Label
+    Friend WithEvents linkBack As LinkLabel
 
 End Class

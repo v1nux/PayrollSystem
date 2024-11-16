@@ -28,4 +28,9 @@ Public Class Form1
         pnlForgotCred.Hide()
         pnlLoginForm.Show()
     End Sub
+
+    Private Sub linkBack_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkBack.LinkClicked
+        pnlForgotCred.Hide()
+        pnlLoginForm.Show()
+    End Sub
 End Class
