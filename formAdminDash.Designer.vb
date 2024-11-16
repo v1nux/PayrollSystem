@@ -41,7 +41,7 @@ Partial Class formMain
         Label4 = New Label()
         Button1 = New Button()
         TextBox1 = New TextBox()
-        pnlPayroll = New Panel()
+        pnlManageEmp = New Panel()
         ComboBox1 = New ComboBox()
         Label12 = New Label()
         DateTimePicker1 = New DateTimePicker()
@@ -59,7 +59,7 @@ Partial Class formMain
         AdminPanel.SuspendLayout()
         pnlViewShift.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        pnlPayroll.SuspendLayout()
+        pnlManageEmp.SuspendLayout()
         SuspendLayout()
         ' 
         ' AdminPanel
@@ -268,26 +268,26 @@ Partial Class formMain
         TextBox1.Size = New Size(406, 29)
         TextBox1.TabIndex = 8
         ' 
-        ' pnlPayroll
+        ' pnlManageEmp
         ' 
-        pnlPayroll.Controls.Add(ComboBox1)
-        pnlPayroll.Controls.Add(Label12)
-        pnlPayroll.Controls.Add(DateTimePicker1)
-        pnlPayroll.Controls.Add(Label11)
-        pnlPayroll.Controls.Add(TextBox5)
-        pnlPayroll.Controls.Add(Label10)
-        pnlPayroll.Controls.Add(TextBox4)
-        pnlPayroll.Controls.Add(Label9)
-        pnlPayroll.Controls.Add(TextBox3)
-        pnlPayroll.Controls.Add(Label8)
-        pnlPayroll.Controls.Add(TextBox2)
-        pnlPayroll.Controls.Add(Label7)
-        pnlPayroll.Controls.Add(Label6)
-        pnlPayroll.Controls.Add(Label5)
-        pnlPayroll.Location = New Point(225, -2)
-        pnlPayroll.Name = "pnlPayroll"
-        pnlPayroll.Size = New Size(698, 549)
-        pnlPayroll.TabIndex = 12
+        pnlManageEmp.Controls.Add(ComboBox1)
+        pnlManageEmp.Controls.Add(Label12)
+        pnlManageEmp.Controls.Add(DateTimePicker1)
+        pnlManageEmp.Controls.Add(Label11)
+        pnlManageEmp.Controls.Add(TextBox5)
+        pnlManageEmp.Controls.Add(Label10)
+        pnlManageEmp.Controls.Add(TextBox4)
+        pnlManageEmp.Controls.Add(Label9)
+        pnlManageEmp.Controls.Add(TextBox3)
+        pnlManageEmp.Controls.Add(Label8)
+        pnlManageEmp.Controls.Add(TextBox2)
+        pnlManageEmp.Controls.Add(Label7)
+        pnlManageEmp.Controls.Add(Label6)
+        pnlManageEmp.Controls.Add(Label5)
+        pnlManageEmp.Location = New Point(225, -2)
+        pnlManageEmp.Name = "pnlManageEmp"
+        pnlManageEmp.Size = New Size(698, 549)
+        pnlManageEmp.TabIndex = 12
         ' 
         ' ComboBox1
         ' 
@@ -426,7 +426,7 @@ Partial Class formMain
         ClientSize = New Size(923, 547)
         ControlBox = False
         Controls.Add(pnlViewShift)
-        Controls.Add(pnlPayroll)
+        Controls.Add(pnlManageEmp)
         Controls.Add(AdminPanel)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(3, 4, 3, 4)
@@ -439,8 +439,8 @@ Partial Class formMain
         pnlViewShift.ResumeLayout(False)
         pnlViewShift.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        pnlPayroll.ResumeLayout(False)
-        pnlPayroll.PerformLayout()
+        pnlManageEmp.ResumeLayout(False)
+        pnlManageEmp.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents AdminPanel As Panel
@@ -471,7 +471,7 @@ Partial Class formMain
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents pnlPayroll As Panel
+    Friend WithEvents pnlManageEmp As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label10 As Label

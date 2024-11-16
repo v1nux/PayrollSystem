@@ -2,15 +2,15 @@
 
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         pnlViewShift.Hide()
-        pnlPayroll.Hide()
+        pnlManageEmp.Hide()
     End Sub
 
     Private Sub btnManageEmployees_Click(sender As Object, e As EventArgs) Handles btnManageEmployees.Click
-        pnlPayroll.Show()
+        pnlManageEmp.Show()
         pnlViewShift.Hide()
     End Sub
     Private Sub btnShift_Click(sender As Object, e As EventArgs) Handles btnShift.Click
-        pnlPayroll.Hide()
+        pnlManageEmp.Hide()
         pnlViewShift.Show()
     End Sub
 
