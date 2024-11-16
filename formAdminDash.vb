@@ -1,19 +1,19 @@
 ﻿Public Class formMain
 
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
-        pnlViewEmp.Hide()
+        pnlViewShift.Hide()
         pnlPayroll.Hide()
     End Sub
 
-    Private Sub btnViewEmployees_Click(sender As Object, e As EventArgs) Handles btnViewEmployees.Click
-        pnlViewEmp.Show()
-        pnlPayroll.Hide()
-    End Sub
-
-    Private Sub btnPayroll_Click(sender As Object, e As EventArgs) Handles btnPayroll.Click
+    Private Sub btnManageEmployees_Click(sender As Object, e As EventArgs) Handles btnManageEmployees.Click
         pnlPayroll.Show()
-        pnlViewEmp.Hide()
+        pnlViewShift.Hide()
     End Sub
+    Private Sub btnShift_Click(sender As Object, e As EventArgs) Handles btnShift.Click
+        pnlPayroll.Hide()
+        pnlViewShift.Show()
+    End Sub
+
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
         Dim loginForm As New Form1()

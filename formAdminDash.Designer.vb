@@ -23,6 +23,7 @@ Partial Class formMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         AdminPanel = New Panel()
+        btnShift = New Button()
         Label1 = New Label()
         btnPayroll = New Button()
         btnViewAllAtt = New Button()
@@ -30,7 +31,7 @@ Partial Class formMain
         btnViewEmployees = New Button()
         btnManageEmployees = New Button()
         btnLogout = New Button()
-        pnlViewEmp = New Panel()
+        pnlViewShift = New Panel()
         DataGridView1 = New DataGridView()
         Column1 = New DataGridViewTextBoxColumn()
         Column2 = New DataGridViewTextBoxColumn()
@@ -56,7 +57,7 @@ Partial Class formMain
         Label6 = New Label()
         Label5 = New Label()
         AdminPanel.SuspendLayout()
-        pnlViewEmp.SuspendLayout()
+        pnlViewShift.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         pnlPayroll.SuspendLayout()
         SuspendLayout()
@@ -64,6 +65,7 @@ Partial Class formMain
         ' AdminPanel
         ' 
         AdminPanel.BackColor = Color.CornflowerBlue
+        AdminPanel.Controls.Add(btnShift)
         AdminPanel.Controls.Add(Label1)
         AdminPanel.Controls.Add(btnPayroll)
         AdminPanel.Controls.Add(btnViewAllAtt)
@@ -76,6 +78,18 @@ Partial Class formMain
         AdminPanel.Name = "AdminPanel"
         AdminPanel.Size = New Size(235, 549)
         AdminPanel.TabIndex = 2
+        ' 
+        ' btnShift
+        ' 
+        btnShift.BackColor = Color.LightBlue
+        btnShift.FlatStyle = FlatStyle.Popup
+        btnShift.Location = New Point(16, 427)
+        btnShift.Margin = New Padding(3, 4, 3, 4)
+        btnShift.Name = "btnShift"
+        btnShift.Size = New Size(199, 45)
+        btnShift.TabIndex = 8
+        btnShift.Text = "View Shift Log"
+        btnShift.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
@@ -160,19 +174,19 @@ Partial Class formMain
         btnLogout.UseMnemonic = False
         btnLogout.UseVisualStyleBackColor = False
         ' 
-        ' pnlViewEmp
+        ' pnlViewShift
         ' 
-        pnlViewEmp.BackColor = Color.Cornsilk
-        pnlViewEmp.Controls.Add(DataGridView1)
-        pnlViewEmp.Controls.Add(Label2)
-        pnlViewEmp.Controls.Add(Label3)
-        pnlViewEmp.Controls.Add(Label4)
-        pnlViewEmp.Controls.Add(Button1)
-        pnlViewEmp.Controls.Add(TextBox1)
-        pnlViewEmp.Location = New Point(225, -2)
-        pnlViewEmp.Name = "pnlViewEmp"
-        pnlViewEmp.Size = New Size(698, 549)
-        pnlViewEmp.TabIndex = 3
+        pnlViewShift.BackColor = Color.Cornsilk
+        pnlViewShift.Controls.Add(DataGridView1)
+        pnlViewShift.Controls.Add(Label2)
+        pnlViewShift.Controls.Add(Label3)
+        pnlViewShift.Controls.Add(Label4)
+        pnlViewShift.Controls.Add(Button1)
+        pnlViewShift.Controls.Add(TextBox1)
+        pnlViewShift.Location = New Point(225, -2)
+        pnlViewShift.Name = "pnlViewShift"
+        pnlViewShift.Size = New Size(698, 549)
+        pnlViewShift.TabIndex = 3
         ' 
         ' DataGridView1
         ' 
@@ -411,7 +425,7 @@ Partial Class formMain
         BackColor = Color.Cornsilk
         ClientSize = New Size(923, 547)
         ControlBox = False
-        Controls.Add(pnlViewEmp)
+        Controls.Add(pnlViewShift)
         Controls.Add(pnlPayroll)
         Controls.Add(AdminPanel)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
@@ -422,8 +436,8 @@ Partial Class formMain
         Name = "formMain"
         Text = "Admin Dashboard"
         AdminPanel.ResumeLayout(False)
-        pnlViewEmp.ResumeLayout(False)
-        pnlViewEmp.PerformLayout()
+        pnlViewShift.ResumeLayout(False)
+        pnlViewShift.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         pnlPayroll.ResumeLayout(False)
         pnlPayroll.PerformLayout()
@@ -437,7 +451,7 @@ Partial Class formMain
     Friend WithEvents btnManageEmployees As Button
     Friend WithEvents btnLogout As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents pnlViewEmp As Panel
+    Friend WithEvents pnlViewShift As Panel
 
     Public Sub New()
 
@@ -472,4 +486,5 @@ Partial Class formMain
     Friend WithEvents Label12 As Label
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents btnShift As Button
 End Class
