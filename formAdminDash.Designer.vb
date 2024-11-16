@@ -41,7 +41,7 @@ Partial Class formMain
         Label4 = New Label()
         Button1 = New Button()
         TextBox1 = New TextBox()
-        pnlManageEmp = New Panel()
+        pnlManageEmpFormA = New Panel()
         ComboBox1 = New ComboBox()
         Label12 = New Label()
         DateTimePicker1 = New DateTimePicker()
@@ -59,7 +59,7 @@ Partial Class formMain
         AdminPanel.SuspendLayout()
         pnlViewShift.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        pnlManageEmp.SuspendLayout()
+        pnlManageEmpFormA.SuspendLayout()
         SuspendLayout()
         ' 
         ' AdminPanel
@@ -165,7 +165,7 @@ Partial Class formMain
         ' 
         btnLogout.BackColor = Color.LightPink
         btnLogout.FlatStyle = FlatStyle.Popup
-        btnLogout.Location = New Point(16, 500)
+        btnLogout.Location = New Point(61, 503)
         btnLogout.Margin = New Padding(3, 4, 3, 4)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(109, 33)
@@ -268,26 +268,26 @@ Partial Class formMain
         TextBox1.Size = New Size(406, 29)
         TextBox1.TabIndex = 8
         ' 
-        ' pnlManageEmp
+        ' pnlManageEmpFormA
         ' 
-        pnlManageEmp.Controls.Add(ComboBox1)
-        pnlManageEmp.Controls.Add(Label12)
-        pnlManageEmp.Controls.Add(DateTimePicker1)
-        pnlManageEmp.Controls.Add(Label11)
-        pnlManageEmp.Controls.Add(TextBox5)
-        pnlManageEmp.Controls.Add(Label10)
-        pnlManageEmp.Controls.Add(TextBox4)
-        pnlManageEmp.Controls.Add(Label9)
-        pnlManageEmp.Controls.Add(TextBox3)
-        pnlManageEmp.Controls.Add(Label8)
-        pnlManageEmp.Controls.Add(TextBox2)
-        pnlManageEmp.Controls.Add(Label7)
-        pnlManageEmp.Controls.Add(Label6)
-        pnlManageEmp.Controls.Add(Label5)
-        pnlManageEmp.Location = New Point(225, -2)
-        pnlManageEmp.Name = "pnlManageEmp"
-        pnlManageEmp.Size = New Size(698, 549)
-        pnlManageEmp.TabIndex = 12
+        pnlManageEmpFormA.Controls.Add(ComboBox1)
+        pnlManageEmpFormA.Controls.Add(Label12)
+        pnlManageEmpFormA.Controls.Add(DateTimePicker1)
+        pnlManageEmpFormA.Controls.Add(Label11)
+        pnlManageEmpFormA.Controls.Add(TextBox5)
+        pnlManageEmpFormA.Controls.Add(Label10)
+        pnlManageEmpFormA.Controls.Add(TextBox4)
+        pnlManageEmpFormA.Controls.Add(Label9)
+        pnlManageEmpFormA.Controls.Add(TextBox3)
+        pnlManageEmpFormA.Controls.Add(Label8)
+        pnlManageEmpFormA.Controls.Add(TextBox2)
+        pnlManageEmpFormA.Controls.Add(Label7)
+        pnlManageEmpFormA.Controls.Add(Label6)
+        pnlManageEmpFormA.Controls.Add(Label5)
+        pnlManageEmpFormA.Location = New Point(225, -2)
+        pnlManageEmpFormA.Name = "pnlManageEmpFormA"
+        pnlManageEmpFormA.Size = New Size(698, 549)
+        pnlManageEmpFormA.TabIndex = 12
         ' 
         ' ComboBox1
         ' 
@@ -425,8 +425,8 @@ Partial Class formMain
         BackColor = Color.Cornsilk
         ClientSize = New Size(923, 547)
         ControlBox = False
+        Controls.Add(pnlManageEmpFormA)
         Controls.Add(pnlViewShift)
-        Controls.Add(pnlManageEmp)
         Controls.Add(AdminPanel)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(3, 4, 3, 4)
@@ -439,8 +439,8 @@ Partial Class formMain
         pnlViewShift.ResumeLayout(False)
         pnlViewShift.PerformLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        pnlManageEmp.ResumeLayout(False)
-        pnlManageEmp.PerformLayout()
+        pnlManageEmpFormA.ResumeLayout(False)
+        pnlManageEmpFormA.PerformLayout()
         ResumeLayout(False)
     End Sub
     Friend WithEvents AdminPanel As Panel
@@ -471,7 +471,7 @@ Partial Class formMain
     Friend WithEvents Label4 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents pnlManageEmp As Panel
+    Friend WithEvents pnlManageEmpFormA As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label10 As Label

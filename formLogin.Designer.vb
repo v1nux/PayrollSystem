@@ -34,12 +34,12 @@ Partial Class Form1
         Panel2 = New Panel()
         Label5 = New Label()
         pnlForgotCred = New Panel()
+        linkBack = New LinkLabel()
         btnCredReset = New Button()
         Label8 = New Label()
         TextBox3 = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
-        linkBack = New LinkLabel()
         pnlLoginForm.SuspendLayout()
         Panel2.SuspendLayout()
         pnlForgotCred.SuspendLayout()
@@ -64,6 +64,7 @@ Partial Class Form1
         ' btnLogin
         ' 
         btnLogin.BackColor = Color.Bisque
+        btnLogin.FlatStyle = FlatStyle.Popup
         btnLogin.Location = New Point(329, 308)
         btnLogin.Name = "btnLogin"
         btnLogin.Size = New Size(118, 36)
@@ -73,7 +74,7 @@ Partial Class Form1
         ' 
         ' pnlLoginForm
         ' 
-        pnlLoginForm.BackColor = Color.WhiteSmoke
+        pnlLoginForm.BackColor = Color.AntiqueWhite
         pnlLoginForm.Controls.Add(linkForgot)
         pnlLoginForm.Controls.Add(Label4)
         pnlLoginForm.Controls.Add(Label3)
@@ -179,6 +180,17 @@ Partial Class Form1
         pnlForgotCred.Size = New Size(695, 404)
         pnlForgotCred.TabIndex = 4
         ' 
+        ' linkBack
+        ' 
+        linkBack.AutoSize = True
+        linkBack.LinkColor = Color.Ivory
+        linkBack.Location = New Point(37, 370)
+        linkBack.Name = "linkBack"
+        linkBack.Size = New Size(50, 15)
+        linkBack.TabIndex = 5
+        linkBack.TabStop = True
+        linkBack.Text = "Go Back"
+        ' 
         ' btnCredReset
         ' 
         btnCredReset.BackColor = Color.MistyRose
@@ -231,25 +243,14 @@ Partial Class Form1
         Label6.TabIndex = 0
         Label6.Text = "Forgot your credentials?"
         ' 
-        ' linkBack
-        ' 
-        linkBack.AutoSize = True
-        linkBack.LinkColor = Color.Ivory
-        linkBack.Location = New Point(37, 370)
-        linkBack.Name = "linkBack"
-        linkBack.Size = New Size(50, 15)
-        linkBack.TabIndex = 5
-        linkBack.TabStop = True
-        linkBack.Text = "Go Back"
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FloralWhite
         ClientSize = New Size(883, 561)
-        Controls.Add(pnlForgotCred)
         Controls.Add(pnlLoginForm)
+        Controls.Add(pnlForgotCred)
         MaximizeBox = False
         MinimizeBox = False
         Name = "Form1"
