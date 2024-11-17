@@ -76,7 +76,7 @@ Partial Class formAdminDash
         AdminPanel.Location = New Point(0, -2)
         AdminPanel.Margin = New Padding(3, 4, 3, 4)
         AdminPanel.Name = "AdminPanel"
-        AdminPanel.Size = New Size(235, 549)
+        AdminPanel.Size = New Size(235, 556)
         AdminPanel.TabIndex = 2
         ' 
         ' btnShift
@@ -286,7 +286,7 @@ Partial Class formAdminDash
         pnlManageEmpFormA.Controls.Add(Label5)
         pnlManageEmpFormA.Location = New Point(225, -2)
         pnlManageEmpFormA.Name = "pnlManageEmpFormA"
-        pnlManageEmpFormA.Size = New Size(698, 549)
+        pnlManageEmpFormA.Size = New Size(698, 553)
         pnlManageEmpFormA.TabIndex = 12
         ' 
         ' ComboBox1
@@ -423,7 +423,7 @@ Partial Class formAdminDash
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.Cornsilk
-        ClientSize = New Size(923, 547)
+        ClientSize = New Size(924, 551)
         ControlBox = False
         Controls.Add(pnlManageEmpFormA)
         Controls.Add(pnlViewShift)
