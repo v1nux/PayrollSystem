@@ -42,6 +42,7 @@ Partial Class formAdminDash
         Button1 = New Button()
         TextBox1 = New TextBox()
         pnlManageEmpFormA = New Panel()
+        Label13 = New Label()
         ComboBox1 = New ComboBox()
         Label12 = New Label()
         DateTimePicker1 = New DateTimePicker()
@@ -64,7 +65,7 @@ Partial Class formAdminDash
         ' 
         ' AdminPanel
         ' 
-        AdminPanel.BackColor = Color.CornflowerBlue
+        AdminPanel.BackColor = Color.FromArgb(CByte(18), CByte(22), CByte(41))
         AdminPanel.Controls.Add(btnShift)
         AdminPanel.Controls.Add(Label1)
         AdminPanel.Controls.Add(btnPayroll)
@@ -176,7 +177,7 @@ Partial Class formAdminDash
         ' 
         ' pnlViewShift
         ' 
-        pnlViewShift.BackColor = Color.Cornsilk
+        pnlViewShift.BackColor = Color.FromArgb(CByte(53), CByte(36), CByte(84))
         pnlViewShift.Controls.Add(DataGridView1)
         pnlViewShift.Controls.Add(Label2)
         pnlViewShift.Controls.Add(Label3)
@@ -185,7 +186,7 @@ Partial Class formAdminDash
         pnlViewShift.Controls.Add(TextBox1)
         pnlViewShift.Location = New Point(225, -2)
         pnlViewShift.Name = "pnlViewShift"
-        pnlViewShift.Size = New Size(698, 549)
+        pnlViewShift.Size = New Size(698, 556)
         pnlViewShift.TabIndex = 3
         ' 
         ' DataGridView1
@@ -218,6 +219,7 @@ Partial Class formAdminDash
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Helvetica", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label2.ForeColor = Color.FromArgb(CByte(184), CByte(193), CByte(236))
         Label2.Location = New Point(135, 76)
         Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
@@ -228,23 +230,26 @@ Partial Class formAdminDash
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 6.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.ForeColor = Color.DimGray
-        Label3.Location = New Point(28, 11)
-        Label3.Margin = New Padding(4, 0, 4, 0)
+        Label3.BackColor = Color.FromArgb(CByte(18), CByte(22), CByte(41))
+        Label3.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.Gainsboro
+        Label3.Location = New Point(0, 1)
+        Label3.Margin = New Padding(10)
         Label3.Name = "Label3"
-        Label3.Size = New Size(96, 12)
+        Label3.Padding = New Padding(5)
+        Label3.Size = New Size(100, 27)
         Label3.TabIndex = 11
-        Label3.Text = "> Viewing Employees..."
+        Label3.Text = "View Shift Log"
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.FromArgb(CByte(184), CByte(193), CByte(236))
         Label4.Location = New Point(36, 154)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(116, 25)
+        Label4.Size = New Size(122, 25)
         Label4.TabIndex = 10
         Label4.Text = "Search User:"
         ' 
@@ -270,6 +275,8 @@ Partial Class formAdminDash
         ' 
         ' pnlManageEmpFormA
         ' 
+        pnlManageEmpFormA.BackColor = Color.FromArgb(CByte(53), CByte(36), CByte(84))
+        pnlManageEmpFormA.Controls.Add(Label13)
         pnlManageEmpFormA.Controls.Add(ComboBox1)
         pnlManageEmpFormA.Controls.Add(Label12)
         pnlManageEmpFormA.Controls.Add(DateTimePicker1)
@@ -289,11 +296,25 @@ Partial Class formAdminDash
         pnlManageEmpFormA.Size = New Size(698, 553)
         pnlManageEmpFormA.TabIndex = 12
         ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.BackColor = Color.FromArgb(CByte(18), CByte(22), CByte(41))
+        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label13.ForeColor = Color.Gainsboro
+        Label13.Location = New Point(0, 1)
+        Label13.Margin = New Padding(10)
+        Label13.Name = "Label13"
+        Label13.Padding = New Padding(5)
+        Label13.Size = New Size(133, 27)
+        Label13.TabIndex = 15
+        Label13.Text = "Manage Employees"
+        ' 
         ' ComboBox1
         ' 
         ComboBox1.FormattingEnabled = True
         ComboBox1.Items.AddRange(New Object() {"1", "2", "3", "4", "5"})
-        ComboBox1.Location = New Point(365, 216)
+        ComboBox1.Location = New Point(365, 235)
         ComboBox1.Name = "ComboBox1"
         ComboBox1.Size = New Size(251, 29)
         ComboBox1.TabIndex = 14
@@ -302,7 +323,8 @@ Partial Class formAdminDash
         ' 
         Label12.AutoSize = True
         Label12.Font = New Font("Helvetica", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(365, 191)
+        Label12.ForeColor = Color.WhiteSmoke
+        Label12.Location = New Point(365, 210)
         Label12.Name = "Label12"
         Label12.Size = New Size(73, 17)
         Label12.TabIndex = 12
@@ -310,7 +332,7 @@ Partial Class formAdminDash
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.Location = New Point(365, 134)
+        DateTimePicker1.Location = New Point(365, 153)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(251, 29)
         DateTimePicker1.TabIndex = 11
@@ -319,7 +341,8 @@ Partial Class formAdminDash
         ' 
         Label11.AutoSize = True
         Label11.Font = New Font("Helvetica", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.Location = New Point(365, 114)
+        Label11.ForeColor = Color.WhiteSmoke
+        Label11.Location = New Point(365, 133)
         Label11.Name = "Label11"
         Label11.Size = New Size(96, 17)
         Label11.TabIndex = 10
@@ -328,7 +351,7 @@ Partial Class formAdminDash
         ' TextBox5
         ' 
         TextBox5.BorderStyle = BorderStyle.FixedSingle
-        TextBox5.Location = New Point(28, 384)
+        TextBox5.Location = New Point(28, 403)
         TextBox5.Name = "TextBox5"
         TextBox5.Size = New Size(253, 29)
         TextBox5.TabIndex = 9
@@ -337,7 +360,8 @@ Partial Class formAdminDash
         ' 
         Label10.AutoSize = True
         Label10.Font = New Font("Helvetica", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(28, 349)
+        Label10.ForeColor = Color.WhiteSmoke
+        Label10.Location = New Point(28, 368)
         Label10.Name = "Label10"
         Label10.Size = New Size(96, 17)
         Label10.TabIndex = 8
@@ -346,7 +370,7 @@ Partial Class formAdminDash
         ' TextBox4
         ' 
         TextBox4.BorderStyle = BorderStyle.FixedSingle
-        TextBox4.Location = New Point(28, 298)
+        TextBox4.Location = New Point(28, 317)
         TextBox4.Name = "TextBox4"
         TextBox4.Size = New Size(253, 29)
         TextBox4.TabIndex = 7
@@ -355,7 +379,8 @@ Partial Class formAdminDash
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Helvetica", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.Location = New Point(28, 269)
+        Label9.ForeColor = Color.WhiteSmoke
+        Label9.Location = New Point(28, 288)
         Label9.Name = "Label9"
         Label9.Size = New Size(115, 17)
         Label9.TabIndex = 6
@@ -364,7 +389,7 @@ Partial Class formAdminDash
         ' TextBox3
         ' 
         TextBox3.BorderStyle = BorderStyle.FixedSingle
-        TextBox3.Location = New Point(28, 216)
+        TextBox3.Location = New Point(28, 235)
         TextBox3.Name = "TextBox3"
         TextBox3.Size = New Size(253, 29)
         TextBox3.TabIndex = 5
@@ -373,7 +398,8 @@ Partial Class formAdminDash
         ' 
         Label8.AutoSize = True
         Label8.Font = New Font("Helvetica", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(28, 191)
+        Label8.ForeColor = Color.WhiteSmoke
+        Label8.Location = New Point(28, 210)
         Label8.Name = "Label8"
         Label8.Size = New Size(100, 17)
         Label8.TabIndex = 4
@@ -382,7 +408,7 @@ Partial Class formAdminDash
         ' TextBox2
         ' 
         TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(28, 134)
+        TextBox2.Location = New Point(28, 153)
         TextBox2.Name = "TextBox2"
         TextBox2.Size = New Size(253, 29)
         TextBox2.TabIndex = 3
@@ -391,7 +417,8 @@ Partial Class formAdminDash
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Helvetica", 11.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(28, 114)
+        Label7.ForeColor = Color.WhiteSmoke
+        Label7.Location = New Point(28, 133)
         Label7.Name = "Label7"
         Label7.Size = New Size(100, 17)
         Label7.TabIndex = 2
@@ -401,8 +428,8 @@ Partial Class formAdminDash
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label6.ForeColor = Color.DimGray
-        Label6.Location = New Point(28, 57)
+        Label6.ForeColor = Color.Gainsboro
+        Label6.Location = New Point(28, 76)
         Label6.Name = "Label6"
         Label6.Size = New Size(377, 13)
         Label6.TabIndex = 1
@@ -412,7 +439,8 @@ Partial Class formAdminDash
         ' 
         Label5.AutoSize = True
         Label5.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(28, 38)
+        Label5.ForeColor = Color.WhiteSmoke
+        Label5.Location = New Point(28, 57)
         Label5.Name = "Label5"
         Label5.Size = New Size(147, 19)
         Label5.TabIndex = 0
@@ -422,11 +450,11 @@ Partial Class formAdminDash
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.Cornsilk
+        BackColor = Color.FromArgb(CByte(53), CByte(36), CByte(84))
         ClientSize = New Size(924, 551)
         ControlBox = False
-        Controls.Add(pnlManageEmpFormA)
         Controls.Add(pnlViewShift)
+        Controls.Add(pnlManageEmpFormA)
         Controls.Add(AdminPanel)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(3, 4, 3, 4)
@@ -434,6 +462,8 @@ Partial Class formAdminDash
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "formAdminDash"
+        Padding = New Padding(10)
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Admin Dashboard"
         AdminPanel.ResumeLayout(False)
         pnlViewShift.ResumeLayout(False)
@@ -487,4 +517,5 @@ Partial Class formAdminDash
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnShift As Button
+    Friend WithEvents Label13 As Label
 End Class

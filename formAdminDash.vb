@@ -10,8 +10,8 @@
         pnlViewShift.Hide()
     End Sub
     Private Sub btnShift_Click(sender As Object, e As EventArgs) Handles btnShift.Click
-        pnlManageEmpFormA.Hide()
         pnlViewShift.Show()
+        pnlManageEmpFormA.Hide()
     End Sub
 
 

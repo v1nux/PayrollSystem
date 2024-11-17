@@ -210,6 +210,7 @@ Partial Class formEmployee
         Controls.Add(pnlClockShift)
         Controls.Add(pnlEmployee)
         Name = "formEmployee"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Employee Dashboard"
         pnlEmployee.ResumeLayout(False)
         pnlClockShift.ResumeLayout(False)

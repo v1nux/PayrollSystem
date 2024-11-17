@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property artistic_blurry_colorful_wallpaper_background() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("artistic-blurry-colorful-wallpaper-background", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property pexels_jplenio_1103970() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("pexels-jplenio-1103970", resourceCulture)
