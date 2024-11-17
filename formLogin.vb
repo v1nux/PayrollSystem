@@ -1,4 +1,5 @@
-﻿Imports MySqlConnector
+﻿Imports System.Drawing.Drawing2D
+Imports MySqlConnector
 
 Public Class formLogin
     ' Init
@@ -8,9 +9,27 @@ Public Class formLogin
     Dim reader As MySqlDataReader
     Dim userRole As String
 
+    'Rounded Corners
+    Public Sub RoundPanelCorners(panel As Panel, radius As Integer)
+        Dim path As New GraphicsPath()
+        Dim rect As Rectangle = panel.ClientRectangle
+
+        path.StartFigure()
+        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
+        path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90)
+        path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90)
+        path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90)
+        path.CloseFigure()
+
+        panel.Region = New Region(path)
+    End Sub
+
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
         databaseConnect()
         pnlForgotCred.Hide()
+
+        RoundPanelCorners(pnlLoginForm, 10)
+        RoundPanelCorners(pnlForgotCred, 10)
     End Sub
     '  ----------------------------------------------------------------------------------------------------------------------------------------------------------
     ' Login

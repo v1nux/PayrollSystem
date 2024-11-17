@@ -40,6 +40,8 @@ Partial Class formLogin
         TextBox3 = New TextBox()
         Label7 = New Label()
         Label6 = New Label()
+        Label9 = New Label()
+        Label10 = New Label()
         pnlLoginForm.SuspendLayout()
         Panel2.SuspendLayout()
         pnlForgotCred.SuspendLayout()
@@ -77,7 +79,8 @@ Partial Class formLogin
         ' 
         ' pnlLoginForm
         ' 
-        pnlLoginForm.BackColor = Color.FromArgb(CByte(25), CByte(9), CByte(65))
+        pnlLoginForm.BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        pnlLoginForm.BorderStyle = BorderStyle.FixedSingle
         pnlLoginForm.Controls.Add(linkForgot)
         pnlLoginForm.Controls.Add(Label4)
         pnlLoginForm.Controls.Add(Label3)
@@ -154,7 +157,7 @@ Partial Class formLogin
         ' 
         ' Panel2
         ' 
-        Panel2.BackColor = Color.FromArgb(CByte(53), CByte(36), CByte(84))
+        Panel2.BackColor = Color.FromArgb(CByte(21), CByte(21), CByte(225))
         Panel2.BackgroundImageLayout = ImageLayout.Center
         Panel2.Controls.Add(Label5)
         Panel2.Location = New Point(0, 0)
@@ -251,13 +254,39 @@ Partial Class formLogin
         Label6.TabIndex = 0
         Label6.Text = "Forgot your credentials?"
         ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.BackColor = Color.Transparent
+        Label9.Font = New Font("Coolvetica Rg", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(21), CByte(21), CByte(225))
+        Label9.Location = New Point(77, 48)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(81, 29)
+        Label9.TabIndex = 9
+        Label9.Text = "| Login"
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.BackColor = Color.Transparent
+        Label10.Font = New Font("Coolvetica Rg", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label10.ForeColor = Color.FromArgb(CByte(21), CByte(21), CByte(225))
+        Label10.Location = New Point(851, 533)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(32, 29)
+        Label10.TabIndex = 10
+        Label10.Text = "v1"
+        ' 
         ' formLogin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(44), CByte(13), CByte(93))
+        BackColor = Color.FromArgb(CByte(246), CByte(238), CByte(235))
         BackgroundImageLayout = ImageLayout.Stretch
         ClientSize = New Size(883, 561)
+        Controls.Add(Label10)
+        Controls.Add(Label9)
         Controls.Add(pnlLoginForm)
         Controls.Add(pnlForgotCred)
         MaximizeBox = False
@@ -271,6 +300,7 @@ Partial Class formLogin
         pnlForgotCred.ResumeLayout(False)
         pnlForgotCred.PerformLayout()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents txtUsername As TextBox
@@ -291,5 +321,7 @@ Partial Class formLogin
     Friend WithEvents linkBack As LinkLabel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
 
 End Class

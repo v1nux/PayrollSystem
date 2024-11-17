@@ -25,8 +25,12 @@
         End If
     End Sub
 
-    Private Sub dataGridEmployees_Load(sender As Object, e As EventArgs) Handles dataGridEmployees.VisibleChanged
+    Private Sub dataGridEmployees_Load(sender As Object, e As EventArgs)
         MessageBox.Show("It works")
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class
