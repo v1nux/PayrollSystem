@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class formMain
+Partial Class formAdminDash
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -418,7 +418,7 @@ Partial Class formMain
         Label5.TabIndex = 0
         Label5.Text = "Employee Details"
         ' 
-        ' formMain
+        ' formAdminDash
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
@@ -433,7 +433,7 @@ Partial Class formMain
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
-        Name = "formMain"
+        Name = "formAdminDash"
         Text = "Admin Dashboard"
         AdminPanel.ResumeLayout(False)
         pnlViewShift.ResumeLayout(False)

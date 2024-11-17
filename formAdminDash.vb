@@ -1,4 +1,4 @@
-﻿Public Class formMain
+﻿Public Class formAdminDash
 
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         pnlViewShift.Hide()
@@ -19,7 +19,7 @@
 
         Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         If result = DialogResult.Yes Then
-            Dim loginForm As New Form1()
+            Dim loginForm As New formLogin()
             loginForm.Show()
             Me.Dispose()
         End If

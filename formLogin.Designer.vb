@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class Form1
+Partial Class formLogin
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,8 +22,8 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        TextBox1 = New TextBox()
-        TextBox2 = New TextBox()
+        txtUsername = New TextBox()
+        txtPassword = New TextBox()
         btnLogin = New Button()
         pnlLoginForm = New Panel()
         linkForgot = New LinkLabel()
@@ -45,21 +45,21 @@ Partial Class Form1
         pnlForgotCred.SuspendLayout()
         SuspendLayout()
         ' 
-        ' TextBox1
+        ' txtUsername
         ' 
-        TextBox1.BorderStyle = BorderStyle.FixedSingle
-        TextBox1.Location = New Point(329, 164)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(312, 23)
-        TextBox1.TabIndex = 0
+        txtUsername.BorderStyle = BorderStyle.FixedSingle
+        txtUsername.Location = New Point(329, 164)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(312, 23)
+        txtUsername.TabIndex = 0
         ' 
-        ' TextBox2
+        ' txtPassword
         ' 
-        TextBox2.BorderStyle = BorderStyle.FixedSingle
-        TextBox2.Location = New Point(329, 242)
-        TextBox2.Name = "TextBox2"
-        TextBox2.Size = New Size(312, 23)
-        TextBox2.TabIndex = 1
+        txtPassword.BorderStyle = BorderStyle.FixedSingle
+        txtPassword.Location = New Point(329, 242)
+        txtPassword.Name = "txtPassword"
+        txtPassword.Size = New Size(312, 23)
+        txtPassword.TabIndex = 1
         ' 
         ' btnLogin
         ' 
@@ -82,8 +82,8 @@ Partial Class Form1
         pnlLoginForm.Controls.Add(Label1)
         pnlLoginForm.Controls.Add(Panel2)
         pnlLoginForm.Controls.Add(btnLogin)
-        pnlLoginForm.Controls.Add(TextBox1)
-        pnlLoginForm.Controls.Add(TextBox2)
+        pnlLoginForm.Controls.Add(txtUsername)
+        pnlLoginForm.Controls.Add(txtPassword)
         pnlLoginForm.Location = New Point(86, 79)
         pnlLoginForm.Name = "pnlLoginForm"
         pnlLoginForm.Size = New Size(695, 404)
@@ -243,7 +243,7 @@ Partial Class Form1
         Label6.TabIndex = 0
         Label6.Text = "Forgot your credentials?"
         ' 
-        ' Form1
+        ' formLogin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
@@ -253,7 +253,7 @@ Partial Class Form1
         Controls.Add(pnlForgotCred)
         MaximizeBox = False
         MinimizeBox = False
-        Name = "Form1"
+        Name = "formLogin"
         Text = "Login"
         pnlLoginForm.ResumeLayout(False)
         pnlLoginForm.PerformLayout()
@@ -263,8 +263,8 @@ Partial Class Form1
         ResumeLayout(False)
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnLogin As Button
     Friend WithEvents pnlLoginForm As Panel
     Friend WithEvents Panel2 As Panel
