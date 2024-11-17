@@ -32,10 +32,11 @@ Partial Class formAdminDash
         btnManageEmployees = New Button()
         btnLogout = New Button()
         pnlViewShift = New Panel()
-        DataGridView1 = New DataGridView()
-        Column1 = New DataGridViewTextBoxColumn()
-        Column2 = New DataGridViewTextBoxColumn()
-        Column3 = New DataGridViewTextBoxColumn()
+        dataGridEmployees = New DataGridView()
+        columnID = New DataGridViewTextBoxColumn()
+        columnName = New DataGridViewTextBoxColumn()
+        columnTime = New DataGridViewTextBoxColumn()
+        columnDate = New DataGridViewTextBoxColumn()
         Label2 = New Label()
         Label3 = New Label()
         Label4 = New Label()
@@ -59,7 +60,7 @@ Partial Class formAdminDash
         Label5 = New Label()
         AdminPanel.SuspendLayout()
         pnlViewShift.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dataGridEmployees, ComponentModel.ISupportInitialize).BeginInit()
         pnlManageEmpFormA.SuspendLayout()
         SuspendLayout()
         ' 
@@ -178,7 +179,7 @@ Partial Class formAdminDash
         ' pnlViewShift
         ' 
         pnlViewShift.BackColor = Color.FromArgb(CByte(53), CByte(36), CByte(84))
-        pnlViewShift.Controls.Add(DataGridView1)
+        pnlViewShift.Controls.Add(dataGridEmployees)
         pnlViewShift.Controls.Add(Label2)
         pnlViewShift.Controls.Add(Label3)
         pnlViewShift.Controls.Add(Label4)
@@ -189,30 +190,39 @@ Partial Class formAdminDash
         pnlViewShift.Size = New Size(698, 556)
         pnlViewShift.TabIndex = 3
         ' 
-        ' DataGridView1
+        ' dataGridEmployees
         ' 
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {Column1, Column2, Column3})
-        DataGridView1.Location = New Point(28, 191)
-        DataGridView1.Margin = New Padding(4)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(642, 346)
-        DataGridView1.TabIndex = 7
+        dataGridEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dataGridEmployees.Columns.AddRange(New DataGridViewColumn() {columnID, columnName, columnTime, columnDate})
+        dataGridEmployees.Location = New Point(28, 191)
+        dataGridEmployees.Margin = New Padding(4)
+        dataGridEmployees.Name = "dataGridEmployees"
+        dataGridEmployees.Size = New Size(642, 346)
+        dataGridEmployees.TabIndex = 7
         ' 
-        ' Column1
+        ' columnID
         ' 
-        Column1.HeaderText = "Column1"
-        Column1.Name = "Column1"
+        columnID.HeaderText = "ID"
+        columnID.Name = "columnID"
+        columnID.Width = 130
         ' 
-        ' Column2
+        ' columnName
         ' 
-        Column2.HeaderText = "Column2"
-        Column2.Name = "Column2"
+        columnName.HeaderText = "Name"
+        columnName.Name = "columnName"
+        columnName.Width = 130
         ' 
-        ' Column3
+        ' columnTime
         ' 
-        Column3.HeaderText = "Column3"
-        Column3.Name = "Column3"
+        columnTime.HeaderText = "Time"
+        columnTime.Name = "columnTime"
+        columnTime.Width = 130
+        ' 
+        ' columnDate
+        ' 
+        columnDate.HeaderText = "Date"
+        columnDate.Name = "columnDate"
+        columnDate.Width = 130
         ' 
         ' Label2
         ' 
@@ -468,7 +478,7 @@ Partial Class formAdminDash
         AdminPanel.ResumeLayout(False)
         pnlViewShift.ResumeLayout(False)
         pnlViewShift.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dataGridEmployees, ComponentModel.ISupportInitialize).EndInit()
         pnlManageEmpFormA.ResumeLayout(False)
         pnlManageEmpFormA.PerformLayout()
         ResumeLayout(False)
@@ -492,10 +502,7 @@ Partial Class formAdminDash
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents dataGridEmployees As DataGridView
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
@@ -518,4 +525,8 @@ Partial Class formAdminDash
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents btnShift As Button
     Friend WithEvents Label13 As Label
+    Friend WithEvents columnID As DataGridViewTextBoxColumn
+    Friend WithEvents columnName As DataGridViewTextBoxColumn
+    Friend WithEvents columnTime As DataGridViewTextBoxColumn
+    Friend WithEvents columnDate As DataGridViewTextBoxColumn
 End Class

@@ -207,8 +207,11 @@ Partial Class formEmployee
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(924, 551)
+        ControlBox = False
         Controls.Add(pnlClockShift)
         Controls.Add(pnlEmployee)
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "formEmployee"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Employee Dashboard"

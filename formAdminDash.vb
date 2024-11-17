@@ -24,4 +24,9 @@
             Me.Dispose()
         End If
     End Sub
+
+    Private Sub dataGridEmployees_Load(sender As Object, e As EventArgs) Handles dataGridEmployees.VisibleChanged
+        MessageBox.Show("It works")
+
+    End Sub
 End Class

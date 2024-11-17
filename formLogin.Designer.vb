@@ -47,6 +47,7 @@ Partial Class formLogin
         ' 
         ' txtUsername
         ' 
+        txtUsername.BackColor = Color.LightSteelBlue
         txtUsername.BorderStyle = BorderStyle.FixedSingle
         txtUsername.Location = New Point(329, 164)
         txtUsername.Name = "txtUsername"
@@ -55,6 +56,7 @@ Partial Class formLogin
         ' 
         ' txtPassword
         ' 
+        txtPassword.BackColor = Color.LightSteelBlue
         txtPassword.BorderStyle = BorderStyle.FixedSingle
         txtPassword.Location = New Point(329, 242)
         txtPassword.Name = "txtPassword"
