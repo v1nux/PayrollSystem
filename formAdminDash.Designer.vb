@@ -23,8 +23,8 @@ Partial Class formAdminDash
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         AdminPanel = New Panel()
+        Label1 = New Label()
         Label2 = New Label()
-        Label14 = New Label()
         btnShift = New Button()
         btnPayroll = New Button()
         btnViewAllAtt = New Button()
@@ -32,7 +32,6 @@ Partial Class formAdminDash
         btnViewEmployees = New Button()
         btnManageEmployees = New Button()
         btnLogout = New Button()
-        Label1 = New Label()
         pnlManageEmpFormA = New Panel()
         Label13 = New Label()
         ComboBox1 = New ComboBox()
@@ -69,8 +68,8 @@ Partial Class formAdminDash
         ' AdminPanel
         ' 
         AdminPanel.BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        AdminPanel.Controls.Add(Label1)
         AdminPanel.Controls.Add(Label2)
-        AdminPanel.Controls.Add(Label14)
         AdminPanel.Controls.Add(btnShift)
         AdminPanel.Controls.Add(btnPayroll)
         AdminPanel.Controls.Add(btnViewAllAtt)
@@ -84,99 +83,98 @@ Partial Class formAdminDash
         AdminPanel.Size = New Size(235, 556)
         AdminPanel.TabIndex = 2
         ' 
+        ' Label1
+        ' 
+        Label1.BackColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
+        Label1.Font = New Font("Helvetica", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        Label1.Location = New Point(0, 2)
+        Label1.Name = "Label1"
+        Label1.Padding = New Padding(10)
+        Label1.Size = New Size(235, 106)
+        Label1.TabIndex = 7
+        Label1.Text = "Admin Dashboard"
+        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.BackColor = Color.Transparent
         Label2.Font = New Font("Coolvetica Rg", 11.9999981F, FontStyle.Underline, GraphicsUnit.Point, CByte(0))
         Label2.ForeColor = Color.White
-        Label2.Location = New Point(71, 53)
+        Label2.Location = New Point(3, 129)
         Label2.Name = "Label2"
         Label2.Size = New Size(44, 19)
         Label2.TabIndex = 10
         Label2.Text = "Menu"
         ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.BackColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
-        Label14.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label14.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
-        Label14.Location = New Point(0, 0)
-        Label14.Name = "Label14"
-        Label14.Padding = New Padding(30, 10, 20, 10)
-        Label14.Size = New Size(178, 39)
-        Label14.TabIndex = 9
-        Label14.Text = "Payroll System"
-        ' 
         ' btnShift
         ' 
-        btnShift.BackColor = Color.LightBlue
+        btnShift.BackColor = Color.Tomato
         btnShift.FlatStyle = FlatStyle.Popup
-        btnShift.Location = New Point(0, 344)
+        btnShift.Location = New Point(0, 405)
         btnShift.Margin = New Padding(3, 4, 3, 4)
         btnShift.Name = "btnShift"
-        btnShift.Size = New Size(199, 45)
+        btnShift.Size = New Size(199, 50)
         btnShift.TabIndex = 8
         btnShift.Text = "View Shift Log"
         btnShift.UseVisualStyleBackColor = False
         ' 
         ' btnPayroll
         ' 
-        btnPayroll.BackColor = Color.LightBlue
+        btnPayroll.BackColor = Color.Tomato
         btnPayroll.FlatStyle = FlatStyle.Popup
-        btnPayroll.Location = New Point(0, 291)
+        btnPayroll.Location = New Point(0, 355)
         btnPayroll.Margin = New Padding(3, 4, 3, 4)
         btnPayroll.Name = "btnPayroll"
-        btnPayroll.Size = New Size(199, 45)
+        btnPayroll.Size = New Size(199, 50)
         btnPayroll.TabIndex = 6
         btnPayroll.Text = "Payroll"
         btnPayroll.UseVisualStyleBackColor = False
         ' 
         ' btnViewAllAtt
         ' 
-        btnViewAllAtt.BackColor = Color.LightBlue
+        btnViewAllAtt.BackColor = Color.Tomato
         btnViewAllAtt.FlatStyle = FlatStyle.Popup
-        btnViewAllAtt.Location = New Point(0, 235)
+        btnViewAllAtt.Location = New Point(0, 302)
         btnViewAllAtt.Margin = New Padding(3, 4, 3, 4)
         btnViewAllAtt.Name = "btnViewAllAtt"
-        btnViewAllAtt.Size = New Size(199, 48)
+        btnViewAllAtt.Size = New Size(199, 53)
         btnViewAllAtt.TabIndex = 5
         btnViewAllAtt.Text = "View All Attendance"
         btnViewAllAtt.UseVisualStyleBackColor = False
         ' 
         ' btnManageAccs
         ' 
-        btnManageAccs.BackColor = Color.LightBlue
+        btnManageAccs.BackColor = Color.Tomato
         btnManageAccs.FlatStyle = FlatStyle.Popup
-        btnManageAccs.Location = New Point(0, 185)
+        btnManageAccs.Location = New Point(0, 255)
         btnManageAccs.Margin = New Padding(3, 4, 3, 4)
         btnManageAccs.Name = "btnManageAccs"
-        btnManageAccs.Size = New Size(199, 42)
+        btnManageAccs.Size = New Size(199, 47)
         btnManageAccs.TabIndex = 4
         btnManageAccs.Text = "Manage Accounts"
         btnManageAccs.UseVisualStyleBackColor = False
         ' 
         ' btnViewEmployees
         ' 
-        btnViewEmployees.BackColor = Color.LightBlue
+        btnViewEmployees.BackColor = Color.Tomato
         btnViewEmployees.FlatStyle = FlatStyle.Popup
-        btnViewEmployees.Location = New Point(0, 132)
+        btnViewEmployees.Location = New Point(0, 205)
         btnViewEmployees.Margin = New Padding(3, 4, 3, 4)
         btnViewEmployees.Name = "btnViewEmployees"
-        btnViewEmployees.Size = New Size(199, 45)
+        btnViewEmployees.Size = New Size(199, 50)
         btnViewEmployees.TabIndex = 3
         btnViewEmployees.Text = "View Employees"
         btnViewEmployees.UseVisualStyleBackColor = False
         ' 
         ' btnManageEmployees
         ' 
-        btnManageEmployees.BackColor = Color.LightBlue
+        btnManageEmployees.BackColor = Color.Tomato
         btnManageEmployees.FlatStyle = FlatStyle.Popup
-        btnManageEmployees.Location = New Point(0, 76)
+        btnManageEmployees.Location = New Point(0, 152)
         btnManageEmployees.Margin = New Padding(3, 4, 3, 4)
         btnManageEmployees.Name = "btnManageEmployees"
-        btnManageEmployees.Size = New Size(199, 48)
+        btnManageEmployees.Size = New Size(199, 53)
         btnManageEmployees.TabIndex = 2
         btnManageEmployees.Text = "Manage Employees"
         btnManageEmployees.UseVisualStyleBackColor = False
@@ -185,7 +183,7 @@ Partial Class formAdminDash
         ' 
         btnLogout.BackColor = Color.LightPink
         btnLogout.FlatStyle = FlatStyle.Popup
-        btnLogout.Location = New Point(61, 503)
+        btnLogout.Location = New Point(0, 490)
         btnLogout.Margin = New Padding(3, 4, 3, 4)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(109, 33)
@@ -193,19 +191,6 @@ Partial Class formAdminDash
         btnLogout.Text = "Logout"
         btnLogout.UseMnemonic = False
         btnLogout.UseVisualStyleBackColor = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
-        Label1.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label1.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
-        Label1.Location = New Point(174, -2)
-        Label1.Name = "Label1"
-        Label1.Padding = New Padding(10)
-        Label1.Size = New Size(192, 39)
-        Label1.TabIndex = 7
-        Label1.Text = ">> Admin Dashboard"
         ' 
         ' pnlManageEmpFormA
         ' 
@@ -372,7 +357,7 @@ Partial Class formAdminDash
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Helvetica", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.WhiteSmoke
         Label5.Location = New Point(29, 74)
         Label5.Name = "Label5"
@@ -489,16 +474,15 @@ Partial Class formAdminDash
         ' 
         ' formAdminDash
         ' 
-        AutoScaleDimensions = New SizeF(9F, 21F)
+        AutoScaleDimensions = New SizeF(9.0F, 21.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         ClientSize = New Size(924, 552)
         ControlBox = False
-        Controls.Add(Label1)
         Controls.Add(pnlViewShift)
         Controls.Add(pnlManageEmpFormA)
         Controls.Add(AdminPanel)
-        Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -515,7 +499,6 @@ Partial Class formAdminDash
         pnlViewShift.PerformLayout()
         CType(dataGridEmployees, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
     Friend WithEvents AdminPanel As Panel
     Friend WithEvents btnViewAllAtt As Button
@@ -534,7 +517,6 @@ Partial Class formAdminDash
 
     End Sub
     Friend WithEvents btnShift As Button
-    Friend WithEvents Label14 As Label
     Friend WithEvents btnPayroll As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents pnlManageEmpFormA As Panel
