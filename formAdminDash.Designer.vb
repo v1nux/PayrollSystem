@@ -59,10 +59,13 @@ Partial Class formAdminDash
         Label15 = New Label()
         Button1 = New Button()
         TextBox1 = New TextBox()
+        pnlTitleBar = New Panel()
+        btnExit = New Button()
         AdminPanel.SuspendLayout()
         pnlManageEmpFormA.SuspendLayout()
         pnlViewShift.SuspendLayout()
         CType(dataGridEmployees, ComponentModel.ISupportInitialize).BeginInit()
+        pnlTitleBar.SuspendLayout()
         SuspendLayout()
         ' 
         ' AdminPanel
@@ -77,16 +80,16 @@ Partial Class formAdminDash
         AdminPanel.Controls.Add(btnViewEmployees)
         AdminPanel.Controls.Add(btnManageEmployees)
         AdminPanel.Controls.Add(btnLogout)
-        AdminPanel.Location = New Point(0, -2)
+        AdminPanel.Location = New Point(1, 28)
         AdminPanel.Margin = New Padding(3, 4, 3, 4)
         AdminPanel.Name = "AdminPanel"
-        AdminPanel.Size = New Size(235, 556)
+        AdminPanel.Size = New Size(235, 651)
         AdminPanel.TabIndex = 2
         ' 
         ' Label1
         ' 
         Label1.BackColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
-        Label1.Font = New Font("Helvetica", 24.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Helvetica", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
         Label1.Location = New Point(0, 2)
         Label1.Name = "Label1"
@@ -194,7 +197,7 @@ Partial Class formAdminDash
         ' 
         ' pnlManageEmpFormA
         ' 
-        pnlManageEmpFormA.BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        pnlManageEmpFormA.BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
         pnlManageEmpFormA.Controls.Add(Label13)
         pnlManageEmpFormA.Controls.Add(ComboBox1)
         pnlManageEmpFormA.Controls.Add(Label12)
@@ -210,9 +213,9 @@ Partial Class formAdminDash
         pnlManageEmpFormA.Controls.Add(Label7)
         pnlManageEmpFormA.Controls.Add(Label6)
         pnlManageEmpFormA.Controls.Add(Label5)
-        pnlManageEmpFormA.Location = New Point(235, 0)
+        pnlManageEmpFormA.Location = New Point(233, 28)
         pnlManageEmpFormA.Name = "pnlManageEmpFormA"
-        pnlManageEmpFormA.Size = New Size(698, 553)
+        pnlManageEmpFormA.Size = New Size(987, 652)
         pnlManageEmpFormA.TabIndex = 14
         ' 
         ' Label13
@@ -221,7 +224,7 @@ Partial Class formAdminDash
         Label13.BackColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
         Label13.Font = New Font("Coolvetica Rg", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label13.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
-        Label13.Location = New Point(519, 0)
+        Label13.Location = New Point(818, 0)
         Label13.Margin = New Padding(10)
         Label13.Name = "Label13"
         Label13.Padding = New Padding(4, 6, 4, 6)
@@ -357,7 +360,7 @@ Partial Class formAdminDash
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Font = New Font("Helvetica", 12.0F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label5.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label5.ForeColor = Color.WhiteSmoke
         Label5.Location = New Point(29, 74)
         Label5.Name = "Label5"
@@ -367,16 +370,16 @@ Partial Class formAdminDash
         ' 
         ' pnlViewShift
         ' 
-        pnlViewShift.BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        pnlViewShift.BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
         pnlViewShift.Controls.Add(Label3)
         pnlViewShift.Controls.Add(dataGridEmployees)
         pnlViewShift.Controls.Add(Label4)
         pnlViewShift.Controls.Add(Label15)
         pnlViewShift.Controls.Add(Button1)
         pnlViewShift.Controls.Add(TextBox1)
-        pnlViewShift.Location = New Point(235, 0)
+        pnlViewShift.Location = New Point(236, 28)
         pnlViewShift.Name = "pnlViewShift"
-        pnlViewShift.Size = New Size(698, 556)
+        pnlViewShift.Size = New Size(984, 652)
         pnlViewShift.TabIndex = 16
         ' 
         ' Label3
@@ -385,7 +388,7 @@ Partial Class formAdminDash
         Label3.BackColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
         Label3.Font = New Font("Coolvetica Rg", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label3.ForeColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
-        Label3.Location = New Point(552, 0)
+        Label3.Location = New Point(851, -3)
         Label3.Margin = New Padding(10)
         Label3.Name = "Label3"
         Label3.Padding = New Padding(4, 6, 4, 6)
@@ -397,10 +400,10 @@ Partial Class formAdminDash
         ' 
         dataGridEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dataGridEmployees.Columns.AddRange(New DataGridViewColumn() {columnID, columnName, columnTime, columnDate})
-        dataGridEmployees.Location = New Point(28, 191)
+        dataGridEmployees.Location = New Point(10, 149)
         dataGridEmployees.Margin = New Padding(4)
         dataGridEmployees.Name = "dataGridEmployees"
-        dataGridEmployees.Size = New Size(642, 346)
+        dataGridEmployees.Size = New Size(963, 486)
         dataGridEmployees.TabIndex = 7
         ' 
         ' columnID
@@ -432,8 +435,8 @@ Partial Class formAdminDash
         Label4.AutoSize = True
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Helvetica", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label4.ForeColor = Color.FromArgb(CByte(184), CByte(193), CByte(236))
-        Label4.Location = New Point(135, 76)
+        Label4.ForeColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
+        Label4.Location = New Point(29, 36)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
         Label4.Size = New Size(431, 25)
@@ -444,8 +447,8 @@ Partial Class formAdminDash
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label15.ForeColor = Color.FromArgb(CByte(184), CByte(193), CByte(236))
-        Label15.Location = New Point(36, 154)
+        Label15.ForeColor = Color.FromArgb(CByte(255), CByte(73), CByte(0))
+        Label15.Location = New Point(29, 84)
         Label15.Margin = New Padding(4, 0, 4, 0)
         Label15.Name = "Label15"
         Label15.Size = New Size(122, 25)
@@ -456,7 +459,7 @@ Partial Class formAdminDash
         ' 
         Button1.BackColor = Color.LightCyan
         Button1.FlatStyle = FlatStyle.Popup
-        Button1.Location = New Point(574, 154)
+        Button1.Location = New Point(446, 113)
         Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
         Button1.Size = New Size(96, 29)
@@ -466,29 +469,53 @@ Partial Class formAdminDash
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(160, 154)
+        TextBox1.Location = New Point(32, 113)
         TextBox1.Margin = New Padding(4)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(406, 29)
         TextBox1.TabIndex = 8
         ' 
+        ' pnlTitleBar
+        ' 
+        pnlTitleBar.BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        pnlTitleBar.Controls.Add(btnExit)
+        pnlTitleBar.Location = New Point(-2, 1)
+        pnlTitleBar.Name = "pnlTitleBar"
+        pnlTitleBar.Size = New Size(1222, 28)
+        pnlTitleBar.TabIndex = 17
+        ' 
+        ' btnExit
+        ' 
+        btnExit.BackColor = Color.IndianRed
+        btnExit.FlatStyle = FlatStyle.Flat
+        btnExit.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnExit.Location = New Point(1191, 3)
+        btnExit.Name = "btnExit"
+        btnExit.Size = New Size(28, 23)
+        btnExit.TabIndex = 0
+        btnExit.Text = "X"
+        btnExit.UseVisualStyleBackColor = False
+        ' 
         ' formAdminDash
         ' 
-        AutoScaleDimensions = New SizeF(9.0F, 21.0F)
+        AutoScaleDimensions = New SizeF(9F, 21F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
-        ClientSize = New Size(924, 552)
+        BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
+        ClientSize = New Size(1220, 680)
         ControlBox = False
         Controls.Add(pnlViewShift)
-        Controls.Add(pnlManageEmpFormA)
+        Controls.Add(pnlTitleBar)
         Controls.Add(AdminPanel)
-        Font = New Font("Segoe UI", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Controls.Add(pnlManageEmpFormA)
+        Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "formAdminDash"
         Padding = New Padding(10)
+        ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
         Text = "Admin Dashboard"
         AdminPanel.ResumeLayout(False)
@@ -498,6 +525,7 @@ Partial Class formAdminDash
         pnlViewShift.ResumeLayout(False)
         pnlViewShift.PerformLayout()
         CType(dataGridEmployees, ComponentModel.ISupportInitialize).EndInit()
+        pnlTitleBar.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
     Friend WithEvents AdminPanel As Panel
@@ -546,4 +574,6 @@ Partial Class formAdminDash
     Friend WithEvents Label15 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents pnlTitleBar As Panel
+    Friend WithEvents btnExit As Button
 End Class
