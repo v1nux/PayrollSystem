@@ -22,15 +22,4 @@ Module SQLConnect
             MsgBox($"Unexpected Error: {ex.Message}", MsgBoxStyle.Critical)
         End Try
     End Sub
-
-    'Public Sub databaseDisconnect()
-    '    Try
-    '        If datacon.State = ConnectionState.Open Then
-    '            datacon.Close()
-    '            MsgBox("Database Connection Closed", MsgBoxStyle.Information)
-    '        End If
-    '    Catch ex As Exception
-    '        MsgBox($"Error Closing Connection: {ex.Message}", MsgBoxStyle.Critical)
-    '    End Try
-    'End Sub
 End Module
