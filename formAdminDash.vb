@@ -65,4 +65,8 @@
     Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
 
     End Sub
+
+    Private Sub pnlViewAttendance_Paint(sender As Object, e As PaintEventArgs) Handles pnlViewAttendance.Paint
+
+    End Sub
 End Class

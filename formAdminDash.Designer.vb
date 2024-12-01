@@ -61,6 +61,7 @@ Partial Class formAdminDash
         TextBox1 = New TextBox()
         pnlTitleBar = New Panel()
         btnExit = New Button()
+        pnlViewAttendance = New Panel()
         AdminPanel.SuspendLayout()
         pnlManageEmpFormA.SuspendLayout()
         pnlViewShift.SuspendLayout()
@@ -70,7 +71,7 @@ Partial Class formAdminDash
         ' 
         ' AdminPanel
         ' 
-        AdminPanel.BackColor = Color.FromArgb(CByte(30), CByte(30), CByte(30))
+        AdminPanel.BackColor = Color.FromArgb(CByte(31), CByte(32), CByte(48))
         AdminPanel.Controls.Add(Label1)
         AdminPanel.Controls.Add(Label2)
         AdminPanel.Controls.Add(btnShift)
@@ -496,6 +497,14 @@ Partial Class formAdminDash
         btnExit.Text = "X"
         btnExit.UseVisualStyleBackColor = False
         ' 
+        ' pnlViewAttendance
+        ' 
+        pnlViewAttendance.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
+        pnlViewAttendance.Location = New Point(236, 28)
+        pnlViewAttendance.Name = "pnlViewAttendance"
+        pnlViewAttendance.Size = New Size(984, 652)
+        pnlViewAttendance.TabIndex = 17
+        ' 
         ' formAdminDash
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
@@ -503,6 +512,7 @@ Partial Class formAdminDash
         BackColor = Color.FromArgb(CByte(37), CByte(37), CByte(37))
         ClientSize = New Size(1220, 680)
         ControlBox = False
+        Controls.Add(pnlViewAttendance)
         Controls.Add(pnlViewShift)
         Controls.Add(pnlTitleBar)
         Controls.Add(AdminPanel)
@@ -576,4 +586,5 @@ Partial Class formAdminDash
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents pnlTitleBar As Panel
     Friend WithEvents btnExit As Button
+    Friend WithEvents pnlViewAttendance As Panel
 End Class
