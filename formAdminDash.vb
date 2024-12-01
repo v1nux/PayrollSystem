@@ -5,15 +5,24 @@
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         pnlViewShift.Hide()
         pnlManageEmpFormA.Hide()
+        pnlViewAttendance.Hide()
     End Sub
 
     Private Sub btnManageEmployees_Click(sender As Object, e As EventArgs) Handles btnManageEmployees.Click
         pnlManageEmpFormA.Show()
         pnlViewShift.Hide()
+        pnlViewAttendance.Hide()
     End Sub
     Private Sub btnShift_Click(sender As Object, e As EventArgs) Handles btnShift.Click
         pnlViewShift.Show()
         pnlManageEmpFormA.Hide()
+        pnlViewAttendance.Hide()
+    End Sub
+
+    Private Sub btnViewAllAtt_Click(sender As Object, e As EventArgs) Handles btnViewAllAtt.Click
+        pnlViewShift.Hide()
+        pnlManageEmpFormA.Hide()
+        pnlViewAttendance.Show()
     End Sub
 
 
@@ -62,11 +71,20 @@
         Application.Exit()
     End Sub
 
-    Private Sub Label13_Click(sender As Object, e As EventArgs) Handles Label13.Click
+    Private Sub AdminPanel_Paint(sender As Object, e As PaintEventArgs) Handles AdminPanel.Paint
+        AdminPanel.BorderStyle = BorderStyle.None
 
-    End Sub
+        Dim radius As Integer = 15
+        Dim rect As Rectangle = AdminPanel.ClientRectangle
+        Dim path As New Drawing2D.GraphicsPath()
 
-    Private Sub pnlViewAttendance_Paint(sender As Object, e As PaintEventArgs) Handles pnlViewAttendance.Paint
+        path.StartFigure()
+        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90)
+        path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90)
+        path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90)
+        path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90)
+        path.CloseFigure()
 
+        AdminPanel.Region = New Region(path)
     End Sub
 End Class

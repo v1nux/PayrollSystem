@@ -6,7 +6,7 @@ Module SQLConnect
     Dim server As String = "127.0.0.1"
     Dim dbasename As String = "PayrollSystem"
     Dim username As String = "root"
-    Dim passwd As String = ""
+    Dim passwd As String = "0000"
 
     Public Sub databaseConnect()
         Try
