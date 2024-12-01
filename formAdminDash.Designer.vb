@@ -22,6 +22,7 @@ Partial Class formAdminDash
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(formAdminDash))
         AdminPanel = New Panel()
         Label1 = New Label()
         Label2 = New Label()
@@ -60,8 +61,25 @@ Partial Class formAdminDash
         Button1 = New Button()
         TextBox1 = New TextBox()
         pnlTitleBar = New Panel()
+        Label22 = New Label()
         btnExit = New Button()
         pnlViewAttendance = New Panel()
+        Label21 = New Label()
+        DataGridView1 = New DataGridView()
+        searchID = New DataGridViewTextBoxColumn()
+        searchFirstName = New DataGridViewTextBoxColumn()
+        searchLastName = New DataGridViewTextBoxColumn()
+        searchDate = New DataGridViewTextBoxColumn()
+        btnSearchAttendance = New Button()
+        DateTimePicker2 = New DateTimePicker()
+        Label20 = New Label()
+        TextBox8 = New TextBox()
+        Label19 = New Label()
+        TextBox7 = New TextBox()
+        Label18 = New Label()
+        TextBox6 = New TextBox()
+        Label17 = New Label()
+        Label16 = New Label()
         Label14 = New Label()
         AdminPanel.SuspendLayout()
         pnlManageEmpFormA.SuspendLayout()
@@ -69,6 +87,7 @@ Partial Class formAdminDash
         CType(dataGridEmployees, ComponentModel.ISupportInitialize).BeginInit()
         pnlTitleBar.SuspendLayout()
         pnlViewAttendance.SuspendLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' AdminPanel
@@ -83,10 +102,10 @@ Partial Class formAdminDash
         AdminPanel.Controls.Add(btnViewEmployees)
         AdminPanel.Controls.Add(btnManageEmployees)
         AdminPanel.Controls.Add(btnLogout)
-        AdminPanel.Location = New Point(13, 32)
+        AdminPanel.Location = New Point(-2, 25)
         AdminPanel.Margin = New Padding(3, 4, 3, 4)
         AdminPanel.Name = "AdminPanel"
-        AdminPanel.Size = New Size(226, 634)
+        AdminPanel.Size = New Size(241, 655)
         AdminPanel.TabIndex = 2
         ' 
         ' Label1
@@ -97,7 +116,7 @@ Partial Class formAdminDash
         Label1.Location = New Point(0, 2)
         Label1.Name = "Label1"
         Label1.Padding = New Padding(10)
-        Label1.Size = New Size(235, 106)
+        Label1.Size = New Size(244, 106)
         Label1.TabIndex = 7
         Label1.Text = "Admin Dashboard"
         ' 
@@ -118,7 +137,7 @@ Partial Class formAdminDash
         btnShift.Anchor = AnchorStyles.None
         btnShift.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnShift.FlatStyle = FlatStyle.Popup
-        btnShift.Location = New Point(12, 436)
+        btnShift.Location = New Point(19, 446)
         btnShift.Margin = New Padding(3, 4, 3, 4)
         btnShift.Name = "btnShift"
         btnShift.Size = New Size(199, 50)
@@ -131,7 +150,7 @@ Partial Class formAdminDash
         btnPayroll.Anchor = AnchorStyles.None
         btnPayroll.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnPayroll.FlatStyle = FlatStyle.Popup
-        btnPayroll.Location = New Point(12, 386)
+        btnPayroll.Location = New Point(19, 396)
         btnPayroll.Margin = New Padding(3, 4, 3, 4)
         btnPayroll.Name = "btnPayroll"
         btnPayroll.Size = New Size(199, 50)
@@ -144,12 +163,12 @@ Partial Class formAdminDash
         btnViewAllAtt.Anchor = AnchorStyles.None
         btnViewAllAtt.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnViewAllAtt.FlatStyle = FlatStyle.Popup
-        btnViewAllAtt.Location = New Point(12, 333)
+        btnViewAllAtt.Location = New Point(19, 343)
         btnViewAllAtt.Margin = New Padding(3, 4, 3, 4)
         btnViewAllAtt.Name = "btnViewAllAtt"
         btnViewAllAtt.Size = New Size(199, 53)
         btnViewAllAtt.TabIndex = 5
-        btnViewAllAtt.Text = "View All Attendance"
+        btnViewAllAtt.Text = "View Attendance"
         btnViewAllAtt.UseVisualStyleBackColor = False
         ' 
         ' btnManageAccs
@@ -157,7 +176,7 @@ Partial Class formAdminDash
         btnManageAccs.Anchor = AnchorStyles.None
         btnManageAccs.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnManageAccs.FlatStyle = FlatStyle.Popup
-        btnManageAccs.Location = New Point(12, 286)
+        btnManageAccs.Location = New Point(19, 296)
         btnManageAccs.Margin = New Padding(3, 4, 3, 4)
         btnManageAccs.Name = "btnManageAccs"
         btnManageAccs.Size = New Size(199, 47)
@@ -170,7 +189,7 @@ Partial Class formAdminDash
         btnViewEmployees.Anchor = AnchorStyles.None
         btnViewEmployees.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnViewEmployees.FlatStyle = FlatStyle.Popup
-        btnViewEmployees.Location = New Point(12, 236)
+        btnViewEmployees.Location = New Point(19, 246)
         btnViewEmployees.Margin = New Padding(3, 4, 3, 4)
         btnViewEmployees.Name = "btnViewEmployees"
         btnViewEmployees.Size = New Size(199, 50)
@@ -183,7 +202,7 @@ Partial Class formAdminDash
         btnManageEmployees.Anchor = AnchorStyles.None
         btnManageEmployees.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnManageEmployees.FlatStyle = FlatStyle.Popup
-        btnManageEmployees.Location = New Point(12, 183)
+        btnManageEmployees.Location = New Point(19, 193)
         btnManageEmployees.Margin = New Padding(3, 4, 3, 4)
         btnManageEmployees.Name = "btnManageEmployees"
         btnManageEmployees.Size = New Size(199, 53)
@@ -446,19 +465,19 @@ Partial Class formAdminDash
         Label4.BackColor = Color.Transparent
         Label4.Font = New Font("Helvetica", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label4.ForeColor = Color.FromArgb(CByte(240), CByte(198), CByte(198))
-        Label4.Location = New Point(29, 36)
+        Label4.Location = New Point(10, 36)
         Label4.Margin = New Padding(4, 0, 4, 0)
         Label4.Name = "Label4"
-        Label4.Size = New Size(431, 25)
+        Label4.Size = New Size(274, 25)
         Label4.TabIndex = 6
-        Label4.Text = "These are the employees on shift today.."
+        Label4.Text = "Employees on shift today"
         ' 
         ' Label15
         ' 
         Label15.AutoSize = True
         Label15.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label15.ForeColor = Color.FromArgb(CByte(244), CByte(219), CByte(214))
-        Label15.Location = New Point(29, 84)
+        Label15.Location = New Point(10, 87)
         Label15.Margin = New Padding(4, 0, 4, 0)
         Label15.Name = "Label15"
         Label15.Size = New Size(122, 25)
@@ -469,7 +488,7 @@ Partial Class formAdminDash
         ' 
         Button1.BackColor = Color.LightCyan
         Button1.FlatStyle = FlatStyle.Popup
-        Button1.Location = New Point(446, 113)
+        Button1.Location = New Point(427, 114)
         Button1.Margin = New Padding(4)
         Button1.Name = "Button1"
         Button1.Size = New Size(96, 29)
@@ -479,7 +498,7 @@ Partial Class formAdminDash
         ' 
         ' TextBox1
         ' 
-        TextBox1.Location = New Point(32, 113)
+        TextBox1.Location = New Point(13, 114)
         TextBox1.Margin = New Padding(4)
         TextBox1.Name = "TextBox1"
         TextBox1.Size = New Size(406, 29)
@@ -488,18 +507,31 @@ Partial Class formAdminDash
         ' pnlTitleBar
         ' 
         pnlTitleBar.BackColor = Color.FromArgb(CByte(24), CByte(25), CByte(38))
+        pnlTitleBar.Controls.Add(Label22)
         pnlTitleBar.Controls.Add(btnExit)
         pnlTitleBar.Location = New Point(-2, 1)
         pnlTitleBar.Name = "pnlTitleBar"
-        pnlTitleBar.Size = New Size(1222, 28)
+        pnlTitleBar.Size = New Size(1222, 24)
         pnlTitleBar.TabIndex = 17
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label22.ForeColor = Color.WhiteSmoke
+        Label22.Location = New Point(12, 6)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(129, 13)
+        Label22.TabIndex = 1
+        Label22.Text = "Payroll System (Admin)"
         ' 
         ' btnExit
         ' 
-        btnExit.BackColor = Color.IndianRed
+        btnExit.BackColor = Color.Transparent
         btnExit.FlatStyle = FlatStyle.Flat
-        btnExit.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        btnExit.Location = New Point(1191, 3)
+        btnExit.Font = New Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnExit.ForeColor = Color.IndianRed
+        btnExit.Location = New Point(1191, 1)
         btnExit.Name = "btnExit"
         btnExit.Size = New Size(28, 23)
         btnExit.TabIndex = 0
@@ -509,11 +541,179 @@ Partial Class formAdminDash
         ' pnlViewAttendance
         ' 
         pnlViewAttendance.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
+        pnlViewAttendance.Controls.Add(Label21)
+        pnlViewAttendance.Controls.Add(DataGridView1)
+        pnlViewAttendance.Controls.Add(btnSearchAttendance)
+        pnlViewAttendance.Controls.Add(DateTimePicker2)
+        pnlViewAttendance.Controls.Add(Label20)
+        pnlViewAttendance.Controls.Add(TextBox8)
+        pnlViewAttendance.Controls.Add(Label19)
+        pnlViewAttendance.Controls.Add(TextBox7)
+        pnlViewAttendance.Controls.Add(Label18)
+        pnlViewAttendance.Controls.Add(TextBox6)
+        pnlViewAttendance.Controls.Add(Label17)
+        pnlViewAttendance.Controls.Add(Label16)
         pnlViewAttendance.Controls.Add(Label14)
         pnlViewAttendance.Location = New Point(236, 28)
         pnlViewAttendance.Name = "pnlViewAttendance"
         pnlViewAttendance.Size = New Size(984, 652)
         pnlViewAttendance.TabIndex = 17
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.BackColor = Color.Transparent
+        Label21.Font = New Font("Helvetica", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label21.ForeColor = Color.DarkGray
+        Label21.Location = New Point(13, 65)
+        Label21.Margin = New Padding(4, 0, 4, 0)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(221, 14)
+        Label21.TabIndex = 29
+        Label21.Text = "Fill up the following to search the index."
+        ' 
+        ' DataGridView1
+        ' 
+        DataGridView1.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
+        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridView1.Columns.AddRange(New DataGridViewColumn() {searchID, searchFirstName, searchLastName, searchDate})
+        DataGridView1.Location = New Point(232, 103)
+        DataGridView1.Name = "DataGridView1"
+        DataGridView1.Size = New Size(739, 532)
+        DataGridView1.TabIndex = 28
+        ' 
+        ' searchID
+        ' 
+        searchID.HeaderText = "ID"
+        searchID.Name = "searchID"
+        searchID.ReadOnly = True
+        searchID.Width = 200
+        ' 
+        ' searchFirstName
+        ' 
+        searchFirstName.HeaderText = "First Name"
+        searchFirstName.Name = "searchFirstName"
+        searchFirstName.ReadOnly = True
+        searchFirstName.Width = 172
+        ' 
+        ' searchLastName
+        ' 
+        searchLastName.HeaderText = "Last Name"
+        searchLastName.Name = "searchLastName"
+        searchLastName.ReadOnly = True
+        searchLastName.Width = 172
+        ' 
+        ' searchDate
+        ' 
+        searchDate.HeaderText = "Date"
+        searchDate.Name = "searchDate"
+        searchDate.ReadOnly = True
+        searchDate.Width = 152
+        ' 
+        ' btnSearchAttendance
+        ' 
+        btnSearchAttendance.BackColor = Color.FromArgb(CByte(240), CByte(198), CByte(198))
+        btnSearchAttendance.FlatStyle = FlatStyle.Flat
+        btnSearchAttendance.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnSearchAttendance.Location = New Point(13, 417)
+        btnSearchAttendance.Name = "btnSearchAttendance"
+        btnSearchAttendance.Size = New Size(75, 32)
+        btnSearchAttendance.TabIndex = 27
+        btnSearchAttendance.Text = "Search"
+        btnSearchAttendance.UseVisualStyleBackColor = False
+        ' 
+        ' DateTimePicker2
+        ' 
+        DateTimePicker2.Location = New Point(13, 361)
+        DateTimePicker2.Name = "DateTimePicker2"
+        DateTimePicker2.Size = New Size(203, 29)
+        DateTimePicker2.TabIndex = 26
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.BackColor = Color.Transparent
+        Label20.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label20.ForeColor = Color.WhiteSmoke
+        Label20.Location = New Point(10, 337)
+        Label20.Margin = New Padding(4, 0, 4, 0)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(46, 19)
+        Label20.TabIndex = 25
+        Label20.Text = "Date"
+        ' 
+        ' TextBox8
+        ' 
+        TextBox8.Location = New Point(13, 291)
+        TextBox8.Name = "TextBox8"
+        TextBox8.Size = New Size(203, 29)
+        TextBox8.TabIndex = 24
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.BackColor = Color.Transparent
+        Label19.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label19.ForeColor = Color.WhiteSmoke
+        Label19.Location = New Point(10, 262)
+        Label19.Margin = New Padding(4, 0, 4, 0)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(92, 19)
+        Label19.TabIndex = 23
+        Label19.Text = "Last Name"
+        ' 
+        ' TextBox7
+        ' 
+        TextBox7.Location = New Point(13, 216)
+        TextBox7.Name = "TextBox7"
+        TextBox7.Size = New Size(203, 29)
+        TextBox7.TabIndex = 22
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.BackColor = Color.Transparent
+        Label18.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label18.ForeColor = Color.WhiteSmoke
+        Label18.Location = New Point(10, 187)
+        Label18.Margin = New Padding(4, 0, 4, 0)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(92, 19)
+        Label18.TabIndex = 21
+        Label18.Text = "First Name"
+        ' 
+        ' TextBox6
+        ' 
+        TextBox6.Location = New Point(13, 138)
+        TextBox6.Name = "TextBox6"
+        TextBox6.Size = New Size(203, 29)
+        TextBox6.TabIndex = 20
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.BackColor = Color.Transparent
+        Label17.Font = New Font("Helvetica", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label17.ForeColor = Color.WhiteSmoke
+        Label17.Location = New Point(10, 109)
+        Label17.Margin = New Padding(4, 0, 4, 0)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(108, 19)
+        Label17.TabIndex = 19
+        Label17.Text = "Empolyee ID"
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.BackColor = Color.Transparent
+        Label16.Font = New Font("Helvetica", 15.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label16.ForeColor = Color.FromArgb(CByte(240), CByte(198), CByte(198))
+        Label16.Location = New Point(10, 36)
+        Label16.Margin = New Padding(4, 0, 4, 0)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(206, 25)
+        Label16.TabIndex = 18
+        Label16.Text = "Search Attendance"
         ' 
         ' Label14
         ' 
@@ -536,13 +736,14 @@ Partial Class formAdminDash
         BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         ClientSize = New Size(1220, 680)
         ControlBox = False
-        Controls.Add(pnlManageEmpFormA)
+        Controls.Add(AdminPanel)
         Controls.Add(pnlViewShift)
         Controls.Add(pnlViewAttendance)
+        Controls.Add(pnlManageEmpFormA)
         Controls.Add(pnlTitleBar)
-        Controls.Add(AdminPanel)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         FormBorderStyle = FormBorderStyle.None
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Margin = New Padding(3, 4, 3, 4)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
@@ -551,7 +752,7 @@ Partial Class formAdminDash
         Padding = New Padding(10)
         ShowIcon = False
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Admin Dashboard"
+        Text = "Payroll System (Admin)"
         AdminPanel.ResumeLayout(False)
         AdminPanel.PerformLayout()
         pnlManageEmpFormA.ResumeLayout(False)
@@ -560,8 +761,10 @@ Partial Class formAdminDash
         pnlViewShift.PerformLayout()
         CType(dataGridEmployees, ComponentModel.ISupportInitialize).EndInit()
         pnlTitleBar.ResumeLayout(False)
+        pnlTitleBar.PerformLayout()
         pnlViewAttendance.ResumeLayout(False)
         pnlViewAttendance.PerformLayout()
+        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents AdminPanel As Panel
@@ -614,4 +817,21 @@ Partial Class formAdminDash
     Friend WithEvents btnExit As Button
     Friend WithEvents pnlViewAttendance As Panel
     Friend WithEvents Label14 As Label
+    Friend WithEvents btnSearchAttendance As Button
+    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents Label20 As Label
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label19 As Label
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents Label16 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label21 As Label
+    Friend WithEvents searchID As DataGridViewTextBoxColumn
+    Friend WithEvents searchFirstName As DataGridViewTextBoxColumn
+    Friend WithEvents searchLastName As DataGridViewTextBoxColumn
+    Friend WithEvents searchDate As DataGridViewTextBoxColumn
+    Friend WithEvents Label22 As Label
 End Class

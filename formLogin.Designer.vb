@@ -266,7 +266,7 @@ Partial Class formLogin
         Label9.BackColor = Color.Transparent
         Label9.Font = New Font("Coolvetica Rg", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label9.ForeColor = Color.FromArgb(CByte(240), CByte(198), CByte(198))
-        Label9.Location = New Point(77, 48)
+        Label9.Location = New Point(77, 45)
         Label9.Name = "Label9"
         Label9.Size = New Size(81, 29)
         Label9.TabIndex = 9
