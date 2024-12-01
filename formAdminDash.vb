@@ -28,7 +28,7 @@
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
 
-        Dim result As DialogResult = MessageBox.Show("Are you sure you want to logout?", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        Dim result As DialogResult = MessageBox.Show("This will end the current session", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
         If result = DialogResult.Yes Then
             Dim loginForm As New formLogin()
             loginForm.Show()

@@ -83,10 +83,10 @@ Partial Class formAdminDash
         AdminPanel.Controls.Add(btnViewEmployees)
         AdminPanel.Controls.Add(btnManageEmployees)
         AdminPanel.Controls.Add(btnLogout)
-        AdminPanel.Location = New Point(13, 36)
+        AdminPanel.Location = New Point(13, 32)
         AdminPanel.Margin = New Padding(3, 4, 3, 4)
         AdminPanel.Name = "AdminPanel"
-        AdminPanel.Size = New Size(226, 630)
+        AdminPanel.Size = New Size(226, 634)
         AdminPanel.TabIndex = 2
         ' 
         ' Label1
@@ -118,7 +118,7 @@ Partial Class formAdminDash
         btnShift.Anchor = AnchorStyles.None
         btnShift.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnShift.FlatStyle = FlatStyle.Popup
-        btnShift.Location = New Point(12, 434)
+        btnShift.Location = New Point(12, 436)
         btnShift.Margin = New Padding(3, 4, 3, 4)
         btnShift.Name = "btnShift"
         btnShift.Size = New Size(199, 50)
@@ -131,7 +131,7 @@ Partial Class formAdminDash
         btnPayroll.Anchor = AnchorStyles.None
         btnPayroll.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnPayroll.FlatStyle = FlatStyle.Popup
-        btnPayroll.Location = New Point(12, 384)
+        btnPayroll.Location = New Point(12, 386)
         btnPayroll.Margin = New Padding(3, 4, 3, 4)
         btnPayroll.Name = "btnPayroll"
         btnPayroll.Size = New Size(199, 50)
@@ -144,7 +144,7 @@ Partial Class formAdminDash
         btnViewAllAtt.Anchor = AnchorStyles.None
         btnViewAllAtt.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnViewAllAtt.FlatStyle = FlatStyle.Popup
-        btnViewAllAtt.Location = New Point(12, 331)
+        btnViewAllAtt.Location = New Point(12, 333)
         btnViewAllAtt.Margin = New Padding(3, 4, 3, 4)
         btnViewAllAtt.Name = "btnViewAllAtt"
         btnViewAllAtt.Size = New Size(199, 53)
@@ -157,7 +157,7 @@ Partial Class formAdminDash
         btnManageAccs.Anchor = AnchorStyles.None
         btnManageAccs.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnManageAccs.FlatStyle = FlatStyle.Popup
-        btnManageAccs.Location = New Point(12, 284)
+        btnManageAccs.Location = New Point(12, 286)
         btnManageAccs.Margin = New Padding(3, 4, 3, 4)
         btnManageAccs.Name = "btnManageAccs"
         btnManageAccs.Size = New Size(199, 47)
@@ -170,7 +170,7 @@ Partial Class formAdminDash
         btnViewEmployees.Anchor = AnchorStyles.None
         btnViewEmployees.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnViewEmployees.FlatStyle = FlatStyle.Popup
-        btnViewEmployees.Location = New Point(12, 234)
+        btnViewEmployees.Location = New Point(12, 236)
         btnViewEmployees.Margin = New Padding(3, 4, 3, 4)
         btnViewEmployees.Name = "btnViewEmployees"
         btnViewEmployees.Size = New Size(199, 50)
@@ -183,7 +183,7 @@ Partial Class formAdminDash
         btnManageEmployees.Anchor = AnchorStyles.None
         btnManageEmployees.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnManageEmployees.FlatStyle = FlatStyle.Popup
-        btnManageEmployees.Location = New Point(12, 181)
+        btnManageEmployees.Location = New Point(12, 183)
         btnManageEmployees.Margin = New Padding(3, 4, 3, 4)
         btnManageEmployees.Name = "btnManageEmployees"
         btnManageEmployees.Size = New Size(199, 53)

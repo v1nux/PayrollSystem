@@ -92,6 +92,11 @@ Public Class formLogin
     End Sub
 
     Private Sub btnCredReset_Click(sender As Object, e As EventArgs) Handles btnCredReset.Click
+        If String.IsNullOrWhiteSpace(txtForgotCreds.Text) Then
+            MessageBox.Show("Please enter your credentials before submitting.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         MessageBox.Show("Your request has been submitted. Please wait for further instructions from our technical team.", "Ticket", MessageBoxButtons.OK, MessageBoxIcon.Information)
         pnlForgotCred.Hide()
         pnlLoginForm.Show()
