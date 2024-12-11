@@ -41,7 +41,7 @@ Public Class formLogin
                         Case "admin"
                             formAdminDash.Show()
                         Case "employee"
-                            formEmployee.Show()
+                            formEmployeeDash.Show()
                             'Case "manager"
                             '    Dim managerForm As New formManagerDash()
                             '    managerForm.Show()

@@ -102,10 +102,10 @@ Partial Class formAdminDash
         AdminPanel.Controls.Add(btnViewEmployees)
         AdminPanel.Controls.Add(btnManageEmployees)
         AdminPanel.Controls.Add(btnLogout)
-        AdminPanel.Location = New Point(-2, 25)
+        AdminPanel.Location = New Point(-2, -8)
         AdminPanel.Margin = New Padding(3, 4, 3, 4)
         AdminPanel.Name = "AdminPanel"
-        AdminPanel.Size = New Size(241, 655)
+        AdminPanel.Size = New Size(241, 688)
         AdminPanel.TabIndex = 2
         ' 
         ' Label1
@@ -113,7 +113,7 @@ Partial Class formAdminDash
         Label1.BackColor = Color.FromArgb(CByte(73), CByte(77), CByte(100))
         Label1.Font = New Font("Helvetica", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(0, 2)
+        Label1.Location = New Point(0, 7)
         Label1.Name = "Label1"
         Label1.Padding = New Padding(10)
         Label1.Size = New Size(244, 106)
@@ -137,7 +137,7 @@ Partial Class formAdminDash
         btnShift.Anchor = AnchorStyles.None
         btnShift.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnShift.FlatStyle = FlatStyle.Popup
-        btnShift.Location = New Point(20, 443)
+        btnShift.Location = New Point(20, 460)
         btnShift.Margin = New Padding(3, 4, 3, 4)
         btnShift.Name = "btnShift"
         btnShift.Size = New Size(199, 50)
@@ -150,7 +150,7 @@ Partial Class formAdminDash
         btnPayroll.Anchor = AnchorStyles.None
         btnPayroll.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnPayroll.FlatStyle = FlatStyle.Popup
-        btnPayroll.Location = New Point(20, 393)
+        btnPayroll.Location = New Point(20, 410)
         btnPayroll.Margin = New Padding(3, 4, 3, 4)
         btnPayroll.Name = "btnPayroll"
         btnPayroll.Size = New Size(199, 50)
@@ -163,7 +163,7 @@ Partial Class formAdminDash
         btnViewAllAtt.Anchor = AnchorStyles.None
         btnViewAllAtt.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnViewAllAtt.FlatStyle = FlatStyle.Popup
-        btnViewAllAtt.Location = New Point(20, 340)
+        btnViewAllAtt.Location = New Point(20, 357)
         btnViewAllAtt.Margin = New Padding(3, 4, 3, 4)
         btnViewAllAtt.Name = "btnViewAllAtt"
         btnViewAllAtt.Size = New Size(199, 53)
@@ -176,7 +176,7 @@ Partial Class formAdminDash
         btnManageAccs.Anchor = AnchorStyles.None
         btnManageAccs.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnManageAccs.FlatStyle = FlatStyle.Popup
-        btnManageAccs.Location = New Point(20, 293)
+        btnManageAccs.Location = New Point(20, 310)
         btnManageAccs.Margin = New Padding(3, 4, 3, 4)
         btnManageAccs.Name = "btnManageAccs"
         btnManageAccs.Size = New Size(199, 47)
@@ -189,7 +189,7 @@ Partial Class formAdminDash
         btnViewEmployees.Anchor = AnchorStyles.None
         btnViewEmployees.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnViewEmployees.FlatStyle = FlatStyle.Popup
-        btnViewEmployees.Location = New Point(20, 243)
+        btnViewEmployees.Location = New Point(20, 260)
         btnViewEmployees.Margin = New Padding(3, 4, 3, 4)
         btnViewEmployees.Name = "btnViewEmployees"
         btnViewEmployees.Size = New Size(199, 50)
@@ -202,7 +202,7 @@ Partial Class formAdminDash
         btnManageEmployees.Anchor = AnchorStyles.None
         btnManageEmployees.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
         btnManageEmployees.FlatStyle = FlatStyle.Popup
-        btnManageEmployees.Location = New Point(20, 190)
+        btnManageEmployees.Location = New Point(20, 207)
         btnManageEmployees.Margin = New Padding(3, 4, 3, 4)
         btnManageEmployees.Name = "btnManageEmployees"
         btnManageEmployees.Size = New Size(199, 53)
@@ -519,7 +519,7 @@ Partial Class formAdminDash
         Label22.AutoSize = True
         Label22.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label22.ForeColor = Color.WhiteSmoke
-        Label22.Location = New Point(12, 6)
+        Label22.Location = New Point(248, 6)
         Label22.Name = "Label22"
         Label22.Size = New Size(129, 13)
         Label22.TabIndex = 1
@@ -737,8 +737,8 @@ Partial Class formAdminDash
         ClientSize = New Size(1220, 680)
         ControlBox = False
         Controls.Add(AdminPanel)
-        Controls.Add(pnlViewShift)
         Controls.Add(pnlViewAttendance)
+        Controls.Add(pnlViewShift)
         Controls.Add(pnlManageEmpFormA)
         Controls.Add(pnlTitleBar)
         Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))

@@ -44,6 +44,7 @@ Partial Class formLogin
         Label10 = New Label()
         pnlTitleBar = New Panel()
         btnExit = New Button()
+        Label22 = New Label()
         pnlLoginForm.SuspendLayout()
         Panel2.SuspendLayout()
         pnlForgotCred.SuspendLayout()
@@ -287,6 +288,7 @@ Partial Class formLogin
         ' pnlTitleBar
         ' 
         pnlTitleBar.BackColor = Color.FromArgb(CByte(24), CByte(25), CByte(38))
+        pnlTitleBar.Controls.Add(Label22)
         pnlTitleBar.Controls.Add(btnExit)
         pnlTitleBar.Location = New Point(-2, 0)
         pnlTitleBar.Name = "pnlTitleBar"
@@ -305,6 +307,17 @@ Partial Class formLogin
         btnExit.TabIndex = 0
         btnExit.Text = "X"
         btnExit.UseVisualStyleBackColor = False
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label22.ForeColor = Color.WhiteSmoke
+        Label22.Location = New Point(14, 8)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(124, 13)
+        Label22.TabIndex = 19
+        Label22.Text = "Payroll System (Login)"
         ' 
         ' formLogin
         ' 
@@ -331,6 +344,7 @@ Partial Class formLogin
         pnlForgotCred.ResumeLayout(False)
         pnlForgotCred.PerformLayout()
         pnlTitleBar.ResumeLayout(False)
+        pnlTitleBar.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -357,5 +371,6 @@ Partial Class formLogin
     Friend WithEvents Label10 As Label
     Friend WithEvents pnlTitleBar As Panel
     Friend WithEvents btnExit As Button
+    Friend WithEvents Label22 As Label
 
 End Class
