@@ -1,4 +1,6 @@
-﻿Public Class formAdminDash
+﻿Imports MySqlConnector
+
+Public Class formAdminDash
 
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         pnlViewShift.Hide()
@@ -72,7 +74,59 @@
 
     Private Sub btnSearchAttendance_Click(sender As Object, e As EventArgs) Handles btnSearchAttendance.Click
         SQLConnect.databaseConnect()
+        Dim dataTable As New DataTable()
+        Dim command As MySqlCommand
 
-        Dim query As String = "SELECT empID, FirstName, LastName, Shifts FROM empLog"
+        Dim query As String = "SELECT empID, FirstName, LastName, Shifts FROM empLogs WHERE 1=1"
+
+        If Not String.IsNullOrWhiteSpace(txtEmpID.Text) Then
+            query &= " AND empID = @empID"
+        End If
+
+        If Not String.IsNullOrWhiteSpace(txtFName.Text) Then
+            query &= " AND FirstName LIKE @FirstName"
+        End If
+
+        If Not String.IsNullOrWhiteSpace(txtLName.Text) Then
+            query &= " AND LastName LIKE @LastName"
+        End If
+
+        command = New MySqlCommand(query, datacon)
+
+        If Not String.IsNullOrWhiteSpace(txtEmpID.Text) Then
+            command.Parameters.AddWithValue("@empID", txtEmpID.Text)
+        End If
+
+        If Not String.IsNullOrWhiteSpace(txtFName.Text) Then
+            command.Parameters.AddWithValue("@FirstName", "%" & txtFName.Text & "%")
+        End If
+
+        If Not String.IsNullOrWhiteSpace(txtLName.Text) Then
+            command.Parameters.AddWithValue("@LastName", "%" & txtLName.Text & "%")
+        End If
+
+        Try
+            Dim adapter As New MySqlDataAdapter(command)
+            dataTable.Clear()
+            adapter.Fill(dataTable)
+
+            If dataTable.Rows.Count > 0 Then
+                dgvSearchAttendance.DataSource = dataTable
+                dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
+                dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
+                dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
+                dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
+
+                dgvSearchAttendance.Columns("Shifts").Width = 200
+            Else
+                MessageBox.Show("No results found.")
+            End If
+        Catch ex As Exception
+            MessageBox.Show($"Error: {ex.Message}")
+        Finally
+            If datacon.State = ConnectionState.Open Then
+                datacon.Close()
+            End If
+        End Try
     End Sub
 End Class

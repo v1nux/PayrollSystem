@@ -66,10 +66,6 @@ Partial Class formAdminDash
         pnlViewAttendance = New Panel()
         Label21 = New Label()
         dgvSearchAttendance = New DataGridView()
-        searchID = New DataGridViewTextBoxColumn()
-        searchFirstName = New DataGridViewTextBoxColumn()
-        searchLastName = New DataGridViewTextBoxColumn()
-        searchDate = New DataGridViewTextBoxColumn()
         btnSearchAttendance = New Button()
         dtpSearchAttendanceDate = New DateTimePicker()
         Label20 = New Label()
@@ -576,39 +572,10 @@ Partial Class formAdminDash
         ' 
         dgvSearchAttendance.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
         dgvSearchAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvSearchAttendance.Columns.AddRange(New DataGridViewColumn() {searchID, searchFirstName, searchLastName, searchDate})
         dgvSearchAttendance.Location = New Point(232, 103)
         dgvSearchAttendance.Name = "dgvSearchAttendance"
         dgvSearchAttendance.Size = New Size(739, 532)
         dgvSearchAttendance.TabIndex = 28
-        ' 
-        ' searchID
-        ' 
-        searchID.HeaderText = "ID"
-        searchID.Name = "searchID"
-        searchID.ReadOnly = True
-        searchID.Width = 200
-        ' 
-        ' searchFirstName
-        ' 
-        searchFirstName.HeaderText = "First Name"
-        searchFirstName.Name = "searchFirstName"
-        searchFirstName.ReadOnly = True
-        searchFirstName.Width = 172
-        ' 
-        ' searchLastName
-        ' 
-        searchLastName.HeaderText = "Last Name"
-        searchLastName.Name = "searchLastName"
-        searchLastName.ReadOnly = True
-        searchLastName.Width = 172
-        ' 
-        ' searchDate
-        ' 
-        searchDate.HeaderText = "Date"
-        searchDate.Name = "searchDate"
-        searchDate.ReadOnly = True
-        searchDate.Width = 152
         ' 
         ' btnSearchAttendance
         ' 
@@ -829,9 +796,5 @@ Partial Class formAdminDash
     Friend WithEvents Label16 As Label
     Friend WithEvents dgvSearchAttendance As DataGridView
     Friend WithEvents Label21 As Label
-    Friend WithEvents searchID As DataGridViewTextBoxColumn
-    Friend WithEvents searchFirstName As DataGridViewTextBoxColumn
-    Friend WithEvents searchLastName As DataGridViewTextBoxColumn
-    Friend WithEvents searchDate As DataGridViewTextBoxColumn
     Friend WithEvents Label22 As Label
 End Class
