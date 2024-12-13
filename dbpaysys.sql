@@ -11,9 +11,10 @@
 
 -- insert into loginCreds (userRole,personalID,fname,mname,lname,logUser,logPass)
 -- VALUES
--- ('admin','1-0000000001', 'John', 'Doe', 'Smith', 'john_smith', 'password123');
+-- ('admin','1-0000000002', 'Jane', 'Doe', 'Smith', 'admin', '123');
 
--- insert into loginCreds (userRole,personalID,fname,mname,lname,logUser,logPass)
--- VALUES
--- ('employee','2-0000000001', 'Dora', 'The', 'Explorer', 'map', '123');
+insert into loginCreds (userRole,personalID,fname,mname,lname,logUser,logPass)
+VALUES
+('employee','2-0000000003', 'Swiper', 'No', 'Swiping', 'fox', '123');
+
 select * from loginCreds;
