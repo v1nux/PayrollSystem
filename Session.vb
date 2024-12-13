@@ -1,11 +1,10 @@
-﻿' Create a new class file called UserSession.vb
-Public Class Session
+﻿Public Class Session
     ' Private static instance
     Private Shared _instance As Session
 
     ' Properties to store session data
-    Public CurrentUserRole As String
-    Public CurrentUserPersonalID As String
+    Public Property CurrentUserRole As String
+    Public Property CurrentUserPersonalID As String
 
     ' Private constructor to prevent direct instantiation
     Private Sub New()

@@ -2,6 +2,12 @@
 
 Public Class formAdminDash
 
+    Dim query As String
+    Dim da As MySqlDataAdapter
+    Dim dataTable As New DataTable
+    Dim command As MySqlCommand
+    Dim adapter As New MySqlDataAdapter(command)
+
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         pnlViewShift.Hide()
         pnlManageEmpFormA.Hide()
@@ -74,10 +80,8 @@ Public Class formAdminDash
 
     Private Sub btnSearchAttendance_Click(sender As Object, e As EventArgs) Handles btnSearchAttendance.Click
         SQLConnect.databaseConnect()
-        Dim dataTable As New DataTable()
-        Dim command As MySqlCommand
 
-        Dim query As String = "SELECT empID, FirstName, LastName, Shifts FROM empLogs WHERE 1=1"
+        query = "SELECT empID, FirstName, LastName, Shifts FROM empLogs WHERE 1=1"
 
         If Not String.IsNullOrWhiteSpace(txtEmpID.Text) Then
             query &= " AND empID = @empID"
@@ -89,6 +93,10 @@ Public Class formAdminDash
 
         If Not String.IsNullOrWhiteSpace(txtLName.Text) Then
             query &= " AND LastName LIKE @LastName"
+        End If
+
+        If dtpSearchAttendanceDate.Checked Then
+            query &= " AND DATE(Shifts) = @Shifts"
         End If
 
         command = New MySqlCommand(query, datacon)
@@ -105,8 +113,11 @@ Public Class formAdminDash
             command.Parameters.AddWithValue("@LastName", "%" & txtLName.Text & "%")
         End If
 
+        If dtpSearchAttendanceDate.Checked Then
+            command.Parameters.AddWithValue("@Shifts", dtpSearchAttendanceDate.Value.Date)
+        End If
+
         Try
-            Dim adapter As New MySqlDataAdapter(command)
             dataTable.Clear()
             adapter.Fill(dataTable)
 
@@ -118,6 +129,7 @@ Public Class formAdminDash
                 dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
 
                 dgvSearchAttendance.Columns("Shifts").Width = 200
+
             Else
                 MessageBox.Show("No results found.")
             End If

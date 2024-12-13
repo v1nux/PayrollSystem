@@ -33,20 +33,16 @@ Partial Class formEmployeeDash
         btnExit = New Button()
         pnlEmpAttendance = New Panel()
         Label14 = New Label()
-        dgvAttendance = New DataGridView()
-        searchID = New DataGridViewTextBoxColumn()
-        searchName = New DataGridViewTextBoxColumn()
-        searchTimeIn = New DataGridViewTextBoxColumn()
-        searchTimeOut = New DataGridViewTextBoxColumn()
+        dgvSearchAttendance = New DataGridView()
         btnSearchAttendance = New Button()
-        dtpAttendance = New DateTimePicker()
+        dtpSearchAttendanceDate = New DateTimePicker()
         Label16 = New Label()
         pnlNewInstance = New Panel()
         Label3 = New Label()
         EmployeePanel.SuspendLayout()
         pnlTitleBar.SuspendLayout()
         pnlEmpAttendance.SuspendLayout()
-        CType(dgvAttendance, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvSearchAttendance, ComponentModel.ISupportInitialize).BeginInit()
         pnlNewInstance.SuspendLayout()
         SuspendLayout()
         ' 
@@ -165,9 +161,9 @@ Partial Class formEmployeeDash
         ' 
         pnlEmpAttendance.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         pnlEmpAttendance.Controls.Add(Label14)
-        pnlEmpAttendance.Controls.Add(dgvAttendance)
+        pnlEmpAttendance.Controls.Add(dgvSearchAttendance)
         pnlEmpAttendance.Controls.Add(btnSearchAttendance)
-        pnlEmpAttendance.Controls.Add(dtpAttendance)
+        pnlEmpAttendance.Controls.Add(dtpSearchAttendanceDate)
         pnlEmpAttendance.Controls.Add(Label16)
         pnlEmpAttendance.Location = New Point(233, 28)
         pnlEmpAttendance.Name = "pnlEmpAttendance"
@@ -188,43 +184,14 @@ Partial Class formEmployeeDash
         Label14.TabIndex = 30
         Label14.Text = "> Attendance <"
         ' 
-        ' dgvAttendance
+        ' dgvSearchAttendance
         ' 
-        dgvAttendance.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
-        dgvAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvAttendance.Columns.AddRange(New DataGridViewColumn() {searchID, searchName, searchTimeIn, searchTimeOut})
-        dgvAttendance.Location = New Point(15, 68)
-        dgvAttendance.Name = "dgvAttendance"
-        dgvAttendance.Size = New Size(960, 572)
-        dgvAttendance.TabIndex = 29
-        ' 
-        ' searchID
-        ' 
-        searchID.HeaderText = "ID"
-        searchID.Name = "searchID"
-        searchID.ReadOnly = True
-        searchID.Width = 200
-        ' 
-        ' searchName
-        ' 
-        searchName.HeaderText = "Name"
-        searchName.Name = "searchName"
-        searchName.ReadOnly = True
-        searchName.Width = 172
-        ' 
-        ' searchTimeIn
-        ' 
-        searchTimeIn.HeaderText = "Time In"
-        searchTimeIn.Name = "searchTimeIn"
-        searchTimeIn.ReadOnly = True
-        searchTimeIn.Width = 172
-        ' 
-        ' searchTimeOut
-        ' 
-        searchTimeOut.HeaderText = "Time Out"
-        searchTimeOut.Name = "searchTimeOut"
-        searchTimeOut.ReadOnly = True
-        searchTimeOut.Width = 152
+        dgvSearchAttendance.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
+        dgvSearchAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvSearchAttendance.Location = New Point(15, 68)
+        dgvSearchAttendance.Name = "dgvSearchAttendance"
+        dgvSearchAttendance.Size = New Size(960, 572)
+        dgvSearchAttendance.TabIndex = 29
         ' 
         ' btnSearchAttendance
         ' 
@@ -238,12 +205,12 @@ Partial Class formEmployeeDash
         btnSearchAttendance.Text = "Search"
         btnSearchAttendance.UseVisualStyleBackColor = False
         ' 
-        ' dtpAttendance
+        ' dtpSearchAttendanceDate
         ' 
-        dtpAttendance.Location = New Point(168, 26)
-        dtpAttendance.Name = "dtpAttendance"
-        dtpAttendance.Size = New Size(292, 29)
-        dtpAttendance.TabIndex = 20
+        dtpSearchAttendanceDate.Location = New Point(168, 26)
+        dtpSearchAttendanceDate.Name = "dtpSearchAttendanceDate"
+        dtpSearchAttendanceDate.Size = New Size(292, 29)
+        dtpSearchAttendanceDate.TabIndex = 20
         ' 
         ' Label16
         ' 
@@ -284,10 +251,10 @@ Partial Class formEmployeeDash
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         ClientSize = New Size(1220, 680)
+        Controls.Add(pnlEmpAttendance)
         Controls.Add(EmployeePanel)
         Controls.Add(pnlTitleBar)
         Controls.Add(pnlNewInstance)
-        Controls.Add(pnlEmpAttendance)
         Font = New Font("Segoe UI", 12F)
         FormBorderStyle = FormBorderStyle.None
         Margin = New Padding(4)
@@ -300,7 +267,7 @@ Partial Class formEmployeeDash
         pnlTitleBar.PerformLayout()
         pnlEmpAttendance.ResumeLayout(False)
         pnlEmpAttendance.PerformLayout()
-        CType(dgvAttendance, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvSearchAttendance, ComponentModel.ISupportInitialize).EndInit()
         pnlNewInstance.ResumeLayout(False)
         pnlNewInstance.PerformLayout()
         ResumeLayout(False)
@@ -316,13 +283,9 @@ Partial Class formEmployeeDash
     Friend WithEvents btnExit As Button
     Friend WithEvents pnlEmpAttendance As Panel
     Friend WithEvents Label16 As Label
-    Friend WithEvents dtpAttendance As DateTimePicker
+    Friend WithEvents dtpSearchAttendanceDate As DateTimePicker
     Friend WithEvents btnSearchAttendance As Button
-    Friend WithEvents dgvAttendance As DataGridView
-    Friend WithEvents searchID As DataGridViewTextBoxColumn
-    Friend WithEvents searchName As DataGridViewTextBoxColumn
-    Friend WithEvents searchTimeIn As DataGridViewTextBoxColumn
-    Friend WithEvents searchTimeOut As DataGridViewTextBoxColumn
+    Friend WithEvents dgvSearchAttendance As DataGridView
     Friend WithEvents btnNewInstance As Button
     Friend WithEvents Label14 As Label
     Friend WithEvents pnlNewInstance As Panel
