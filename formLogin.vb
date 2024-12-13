@@ -38,8 +38,8 @@ Public Class formLogin
                     Dim userRole As String = reader("userRole").ToString()
                     Dim personalID As String = reader("personalID").ToString()
 
-                    CurrentUserRole = userRole
-                    CurrentUserPersonalID = personalID
+                    'CurrentUserRole = userRole
+                    'CurrentUserPersonalID = personalID
 
                     Select Case userRole.ToLower()
                         Case "admin"
