@@ -68,4 +68,11 @@
     Private Sub formAdminDash_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
     End Sub
+
+
+    Private Sub btnSearchAttendance_Click(sender As Object, e As EventArgs) Handles btnSearchAttendance.Click
+        SQLConnect.databaseConnect()
+
+        Dim query As String = "SELECT empID, FirstName, LastName, Shifts FROM empLog"
+    End Sub
 End Class

@@ -65,19 +65,19 @@ Partial Class formAdminDash
         btnExit = New Button()
         pnlViewAttendance = New Panel()
         Label21 = New Label()
-        DataGridView1 = New DataGridView()
+        dgvSearchAttendance = New DataGridView()
         searchID = New DataGridViewTextBoxColumn()
         searchFirstName = New DataGridViewTextBoxColumn()
         searchLastName = New DataGridViewTextBoxColumn()
         searchDate = New DataGridViewTextBoxColumn()
         btnSearchAttendance = New Button()
-        DateTimePicker2 = New DateTimePicker()
+        dtpSearchAttendanceDate = New DateTimePicker()
         Label20 = New Label()
-        TextBox8 = New TextBox()
+        txtLName = New TextBox()
         Label19 = New Label()
-        TextBox7 = New TextBox()
+        txtFName = New TextBox()
         Label18 = New Label()
-        TextBox6 = New TextBox()
+        txtEmpID = New TextBox()
         Label17 = New Label()
         Label16 = New Label()
         Label14 = New Label()
@@ -87,7 +87,7 @@ Partial Class formAdminDash
         CType(dataGridEmployees, ComponentModel.ISupportInitialize).BeginInit()
         pnlTitleBar.SuspendLayout()
         pnlViewAttendance.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvSearchAttendance, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' AdminPanel
@@ -542,15 +542,15 @@ Partial Class formAdminDash
         ' 
         pnlViewAttendance.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         pnlViewAttendance.Controls.Add(Label21)
-        pnlViewAttendance.Controls.Add(DataGridView1)
+        pnlViewAttendance.Controls.Add(dgvSearchAttendance)
         pnlViewAttendance.Controls.Add(btnSearchAttendance)
-        pnlViewAttendance.Controls.Add(DateTimePicker2)
+        pnlViewAttendance.Controls.Add(dtpSearchAttendanceDate)
         pnlViewAttendance.Controls.Add(Label20)
-        pnlViewAttendance.Controls.Add(TextBox8)
+        pnlViewAttendance.Controls.Add(txtLName)
         pnlViewAttendance.Controls.Add(Label19)
-        pnlViewAttendance.Controls.Add(TextBox7)
+        pnlViewAttendance.Controls.Add(txtFName)
         pnlViewAttendance.Controls.Add(Label18)
-        pnlViewAttendance.Controls.Add(TextBox6)
+        pnlViewAttendance.Controls.Add(txtEmpID)
         pnlViewAttendance.Controls.Add(Label17)
         pnlViewAttendance.Controls.Add(Label16)
         pnlViewAttendance.Controls.Add(Label14)
@@ -572,15 +572,15 @@ Partial Class formAdminDash
         Label21.TabIndex = 29
         Label21.Text = "Fill up the following to search the index."
         ' 
-        ' DataGridView1
+        ' dgvSearchAttendance
         ' 
-        DataGridView1.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {searchID, searchFirstName, searchLastName, searchDate})
-        DataGridView1.Location = New Point(232, 103)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(739, 532)
-        DataGridView1.TabIndex = 28
+        dgvSearchAttendance.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
+        dgvSearchAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvSearchAttendance.Columns.AddRange(New DataGridViewColumn() {searchID, searchFirstName, searchLastName, searchDate})
+        dgvSearchAttendance.Location = New Point(232, 103)
+        dgvSearchAttendance.Name = "dgvSearchAttendance"
+        dgvSearchAttendance.Size = New Size(739, 532)
+        dgvSearchAttendance.TabIndex = 28
         ' 
         ' searchID
         ' 
@@ -622,12 +622,12 @@ Partial Class formAdminDash
         btnSearchAttendance.Text = "Search"
         btnSearchAttendance.UseVisualStyleBackColor = False
         ' 
-        ' DateTimePicker2
+        ' dtpSearchAttendanceDate
         ' 
-        DateTimePicker2.Location = New Point(13, 361)
-        DateTimePicker2.Name = "DateTimePicker2"
-        DateTimePicker2.Size = New Size(203, 29)
-        DateTimePicker2.TabIndex = 26
+        dtpSearchAttendanceDate.Location = New Point(13, 361)
+        dtpSearchAttendanceDate.Name = "dtpSearchAttendanceDate"
+        dtpSearchAttendanceDate.Size = New Size(203, 29)
+        dtpSearchAttendanceDate.TabIndex = 26
         ' 
         ' Label20
         ' 
@@ -642,12 +642,12 @@ Partial Class formAdminDash
         Label20.TabIndex = 25
         Label20.Text = "Date"
         ' 
-        ' TextBox8
+        ' txtLName
         ' 
-        TextBox8.Location = New Point(13, 291)
-        TextBox8.Name = "TextBox8"
-        TextBox8.Size = New Size(203, 29)
-        TextBox8.TabIndex = 24
+        txtLName.Location = New Point(13, 291)
+        txtLName.Name = "txtLName"
+        txtLName.Size = New Size(203, 29)
+        txtLName.TabIndex = 24
         ' 
         ' Label19
         ' 
@@ -662,12 +662,12 @@ Partial Class formAdminDash
         Label19.TabIndex = 23
         Label19.Text = "Last Name"
         ' 
-        ' TextBox7
+        ' txtFName
         ' 
-        TextBox7.Location = New Point(13, 216)
-        TextBox7.Name = "TextBox7"
-        TextBox7.Size = New Size(203, 29)
-        TextBox7.TabIndex = 22
+        txtFName.Location = New Point(13, 216)
+        txtFName.Name = "txtFName"
+        txtFName.Size = New Size(203, 29)
+        txtFName.TabIndex = 22
         ' 
         ' Label18
         ' 
@@ -682,12 +682,12 @@ Partial Class formAdminDash
         Label18.TabIndex = 21
         Label18.Text = "First Name"
         ' 
-        ' TextBox6
+        ' txtEmpID
         ' 
-        TextBox6.Location = New Point(13, 138)
-        TextBox6.Name = "TextBox6"
-        TextBox6.Size = New Size(203, 29)
-        TextBox6.TabIndex = 20
+        txtEmpID.Location = New Point(13, 138)
+        txtEmpID.Name = "txtEmpID"
+        txtEmpID.Size = New Size(203, 29)
+        txtEmpID.TabIndex = 20
         ' 
         ' Label17
         ' 
@@ -764,7 +764,7 @@ Partial Class formAdminDash
         pnlTitleBar.PerformLayout()
         pnlViewAttendance.ResumeLayout(False)
         pnlViewAttendance.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvSearchAttendance, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
     Friend WithEvents AdminPanel As Panel
@@ -818,16 +818,16 @@ Partial Class formAdminDash
     Friend WithEvents pnlViewAttendance As Panel
     Friend WithEvents Label14 As Label
     Friend WithEvents btnSearchAttendance As Button
-    Friend WithEvents DateTimePicker2 As DateTimePicker
+    Friend WithEvents dtpSearchAttendanceDate As DateTimePicker
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtLName As TextBox
     Friend WithEvents Label19 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents txtFName As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtEmpID As TextBox
     Friend WithEvents Label17 As Label
     Friend WithEvents Label16 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvSearchAttendance As DataGridView
     Friend WithEvents Label21 As Label
     Friend WithEvents searchID As DataGridViewTextBoxColumn
     Friend WithEvents searchFirstName As DataGridViewTextBoxColumn
