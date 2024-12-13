@@ -22,6 +22,114 @@ Public Class formEmployeeDash
         End If
     End Sub
 
+    ' Button Clicks
+
+    Private Sub btnEmployeeAttendance_Click(sender As Object, e As EventArgs) Handles btnEmployeeAttendance.Click
+        pnlNewInstance.Hide()
+        pnlEmpAttendance.Show()
+    End Sub
+
+    Private Sub btnNewInstance_Click(sender As Object, e As EventArgs) Handles btnNewInstance.Click
+        pnlEmpAttendance.Hide()
+        pnlNewInstance.Show()
+    End Sub
+
+    Private Sub btnShowAll_Click(sender As Object, e As EventArgs) Handles btnShowAll.Click
+        Try
+            personalID = userSession.CurrentUserPersonalID
+
+            query = "SELECT emp.empID, emp.FirstName, emp.LastName, emp.Shifts " &
+                              "FROM empLogs emp " &
+                              "INNER JOIN loginCreds loginCreds ON emp.empID = loginCreds.personalID " &
+                              "WHERE loginCreds.personalID = @personalID"
+
+            Dim parameters As New List(Of MySqlParameter) From {
+            New MySqlParameter("@personalID", personalID)
+        }
+
+            Dim dataTable As New DataTable()
+            Using cmd As New MySqlCommand(query, SQLConnect.datacon)
+                cmd.Parameters.AddRange(parameters.ToArray())
+                Dim adapter As New MySqlDataAdapter(cmd)
+                adapter.Fill(dataTable)
+            End Using
+
+            If dataTable.Rows.Count > 0 Then
+                dgvSearchAttendance.DataSource = dataTable
+                dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
+                dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
+                dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
+                dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
+
+                dgvSearchAttendance.Columns("Shifts").Width = 200
+                dgvSearchAttendance.Columns("empID").Width = 200
+            Else
+                MessageBox.Show("No records found.")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show($"Error: {ex.Message}")
+        Finally
+            If SQLConnect.datacon.State = ConnectionState.Open Then
+                SQLConnect.datacon.Close()
+            End If
+        End Try
+
+    End Sub
+
+    Private Sub btnSearchAttendance_Click(sender As Object, e As EventArgs) Handles btnSearchAttendance.Click
+
+        Try
+            personalID = userSession.CurrentUserPersonalID
+
+            query = "SELECT emp.empID, emp.FirstName, emp.LastName, emp.Shifts " &
+                              "FROM empLogs emp " &
+                              "INNER JOIN loginCreds loginCreds ON emp.empID = loginCreds.personalID " &
+                              "WHERE loginCreds.personalID = @personalID"
+
+            If dtpSearchAttendanceDate.Checked Then
+                query &= " AND DATE(emp.Shifts) = @Shifts"
+            End If
+
+            Dim parameters As New List(Of MySqlParameter) From {
+            New MySqlParameter("@personalID", personalID)
+        }
+            If dtpSearchAttendanceDate.Checked Then
+                parameters.Add(New MySqlParameter("@Shifts", dtpSearchAttendanceDate.Value.Date))
+            End If
+
+            Dim dataTable As New DataTable()
+            Using cmd As New MySqlCommand(query, SQLConnect.datacon)
+                cmd.Parameters.AddRange(parameters.ToArray())
+                Dim adapter As New MySqlDataAdapter(cmd)
+                adapter.Fill(dataTable)
+            End Using
+
+            If dataTable.Rows.Count > 0 Then
+                dgvSearchAttendance.DataSource = dataTable
+                dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
+                dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
+                dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
+                dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
+
+                dgvSearchAttendance.Columns("Shifts").Width = 200
+                dgvSearchAttendance.Columns("empID").Width = 200
+            Else
+                MessageBox.Show("No records found.")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show($"Error: {ex.Message}")
+        Finally
+            If SQLConnect.datacon.State = ConnectionState.Open Then
+                SQLConnect.datacon.Close()
+            End If
+        End Try
+    End Sub
+
+
+    ' Custom Title Bar
+
     Private isDragging As Boolean
     Private startPoint As Point
 
@@ -48,68 +156,5 @@ Public Class formEmployeeDash
 
     Private Sub formAdminDash_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
-    End Sub
-
-    ' Button Clicks
-
-    Private Sub btnEmployeeAttendance_Click(sender As Object, e As EventArgs) Handles btnEmployeeAttendance.Click
-        pnlNewInstance.Hide()
-        pnlEmpAttendance.Show()
-    End Sub
-
-    Private Sub btnNewInstance_Click(sender As Object, e As EventArgs) Handles btnNewInstance.Click
-        pnlEmpAttendance.Hide()
-        pnlNewInstance.Show()
-    End Sub
-
-    Private Sub btnSearchAttendance_Click(sender As Object, e As EventArgs) Handles btnSearchAttendance.Click
-        Try
-
-            personalID = userSession.CurrentUserPersonalID
-
-            query = "SELECT empLogs.empID, empLogs.FirstName, empLogs.LastName, empLogs.Shifts " &
-                                      "FROM empLogs " &
-                                      "JOIN loginCreds ON loginCreds.personalID = loginCreds.personalID " &
-                                      "WHERE loginCreds.personalID = @personalID"
-
-            If dtpSearchAttendanceDate.Checked Then
-                query &= " AND DATE(empLogs.Shifts) = @Shifts"
-            End If
-
-            Dim parameters As New List(Of MySqlParameter) From {
-                New MySqlParameter("@personalID", personalID)
-            }
-
-            If dtpSearchAttendanceDate.Checked Then
-                parameters.Add(New MySqlParameter("@Shifts", dtpSearchAttendanceDate.Value.Date))
-            End If
-
-
-            Using cmd As New MySqlCommand(query, SQLConnect.datacon)
-                cmd.Parameters.AddRange(parameters.ToArray())
-                Dim adapter As New MySqlDataAdapter(cmd)
-                adapter.Fill(dataTable)
-            End Using
-
-            If dataTable.Rows.Count > 0 Then
-                dgvSearchAttendance.DataSource = dataTable
-                dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
-                dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
-                dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
-                dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
-
-                dgvSearchAttendance.Columns("Shifts").Width = 200
-                dgvSearchAttendance.Columns("empID").Width = 200
-            Else
-                MessageBox.Show("No attendance records found.", "No Records", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            End If
-
-        Catch ex As Exception
-            MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        Finally
-            If SQLConnect.datacon.State = ConnectionState.Open Then
-                SQLConnect.datacon.Close()
-            End If
-        End Try
     End Sub
 End Class

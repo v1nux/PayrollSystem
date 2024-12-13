@@ -7,6 +7,7 @@ Public Class formLogin
     Dim query As String
     Dim reader As MySqlDataReader
     Dim userRole As String
+    Dim personalID As String
 
     Private Sub formLogin_Load(sender As Object, e As EventArgs) Handles Me.Load
         Session.GetInstance()
@@ -35,8 +36,8 @@ Public Class formLogin
                 If reader.HasRows Then
                     reader.Read()
 
-                    Dim userRole As String = reader("userRole").ToString()
-                    Dim personalID As String = reader("personalID").ToString()
+                    userRole = reader("userRole").ToString()
+                    personalID = reader("personalID").ToString()
 
                     Dim userSession = Session.GetInstance()
                     userSession.CurrentUserPersonalID = personalID
@@ -66,103 +67,6 @@ Public Class formLogin
             End If
         End Try
     End Sub
-
-    'username = txtUsername.Text
-    'password = txtPassword.Text
-
-    'query = "SELECT userRole, personalID FROM loginCreds WHERE logUser = @username AND logPass = @password"
-
-    'Try
-    '    If datacon.State = ConnectionState.Closed Then
-    '        datacon.Open()
-    '    End If
-
-    '    Using cmd As New MySqlCommand(query, datacon)
-    '        cmd.Parameters.AddWithValue("@username", username)
-    '        cmd.Parameters.AddWithValue("@password", password)
-
-    '        Dim reader As MySqlDataReader = cmd.ExecuteReader()
-    '        If reader.HasRows Then
-    '            reader.Read()
-
-    '            Dim userRole As String = reader("userRole").ToString()
-    '            Dim personalID As String = reader("personalID").ToString()
-
-    '            'CurrentUserRole = userRole
-    '            'CurrentUserPersonalID = personalID
-
-    '            Select Case userRole.ToLower()
-    '                Case "admin"
-    '                    formAdminDash.Show()
-    '                Case "employee"
-    '                    formEmployeeDash.Show()
-
-    '                Case Else
-    '                    MessageBox.Show("Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '            End Select
-
-    '            Me.Hide()
-    '        Else
-    '            MessageBox.Show("Invalid username or password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '        End If
-    '        reader.Close()
-    '    End Using
-
-    'Catch ex As Exception
-    '    MessageBox.Show($"Error: {ex.Message}", "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    'Finally
-    '    If datacon.State = ConnectionState.Open Then
-    '        datacon.Close()
-    '    End If
-    'End Try
-
-
-
-
-
-    '    Using cmd As New MySqlCommand(query, datacon)
-
-    '        cmd.Parameters.AddWithValue("@username", username)
-    '        cmd.Parameters.AddWithValue("@password", password)
-
-    '        reader = cmd.ExecuteReader()
-    '        If reader.HasRows Then
-    '            reader.Read()
-    '            userRole = reader("userRole").ToString()
-
-    '            Select Case userRole.ToLower()
-    '                Case "admin"
-    '                    formAdminDash.Show()
-    '                Case "employee"
-    '                    formEmployeeDash.Show()
-    '                    'Case "manager"
-    '                    '    Dim managerForm As New formManagerDash()
-    '                    '    managerForm.Show()
-    '                Case Else
-    '                    MessageBox.Show("Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '            End Select
-
-    '            Me.Hide()
-
-    '        Else
-    '            MessageBox.Show("Invalid username or password", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    '        End If
-    '        reader.Close()
-    '    End Using
-
-    'Catch ex As Exception
-    '    MessageBox.Show($"Error: {ex.Message}", "Database Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-    'Finally
-    '    If datacon.State = ConnectionState.Open Then
-    '        datacon.Close()
-    '    End If
-    'End Try
-    ' -----------------------------------------------------------------------------------------------------------------------------------------------------------
-    ' Button Clicks
-    'Private Sub linkForgot_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
-    '    pnlLoginForm.Hide()
-    '    pnlForgotCred.Show()
-    'End Sub
 
     Private Sub btnCredReset_Click(sender As Object, e As EventArgs) Handles btnCredReset.Click
         If String.IsNullOrWhiteSpace(txtForgotCreds.Text) Then

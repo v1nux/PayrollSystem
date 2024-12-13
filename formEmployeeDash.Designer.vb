@@ -32,6 +32,7 @@ Partial Class formEmployeeDash
         Label22 = New Label()
         btnExit = New Button()
         pnlEmpAttendance = New Panel()
+        btnShowAll = New Button()
         Label14 = New Label()
         dgvSearchAttendance = New DataGridView()
         btnSearchAttendance = New Button()
@@ -160,6 +161,7 @@ Partial Class formEmployeeDash
         ' pnlEmpAttendance
         ' 
         pnlEmpAttendance.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
+        pnlEmpAttendance.Controls.Add(btnShowAll)
         pnlEmpAttendance.Controls.Add(Label14)
         pnlEmpAttendance.Controls.Add(dgvSearchAttendance)
         pnlEmpAttendance.Controls.Add(btnSearchAttendance)
@@ -169,6 +171,18 @@ Partial Class formEmployeeDash
         pnlEmpAttendance.Name = "pnlEmpAttendance"
         pnlEmpAttendance.Size = New Size(987, 652)
         pnlEmpAttendance.TabIndex = 19
+        ' 
+        ' btnShowAll
+        ' 
+        btnShowAll.BackColor = Color.FromArgb(CByte(240), CByte(198), CByte(198))
+        btnShowAll.FlatStyle = FlatStyle.Flat
+        btnShowAll.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnShowAll.Location = New Point(578, 26)
+        btnShowAll.Name = "btnShowAll"
+        btnShowAll.Size = New Size(131, 29)
+        btnShowAll.TabIndex = 31
+        btnShowAll.Text = "Show All Shifts"
+        btnShowAll.UseVisualStyleBackColor = False
         ' 
         ' Label14
         ' 
@@ -251,9 +265,9 @@ Partial Class formEmployeeDash
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         ClientSize = New Size(1220, 680)
-        Controls.Add(pnlEmpAttendance)
         Controls.Add(EmployeePanel)
         Controls.Add(pnlTitleBar)
+        Controls.Add(pnlEmpAttendance)
         Controls.Add(pnlNewInstance)
         Font = New Font("Segoe UI", 12F)
         FormBorderStyle = FormBorderStyle.None
@@ -290,4 +304,5 @@ Partial Class formEmployeeDash
     Friend WithEvents Label14 As Label
     Friend WithEvents pnlNewInstance As Panel
     Friend WithEvents Label3 As Label
+    Friend WithEvents btnShowAll As Button
 End Class
