@@ -572,9 +572,9 @@ Partial Class formAdminDash
         ' 
         dgvSearchAttendance.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
         dgvSearchAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvSearchAttendance.Location = New Point(232, 103)
+        dgvSearchAttendance.Location = New Point(253, 103)
         dgvSearchAttendance.Name = "dgvSearchAttendance"
-        dgvSearchAttendance.Size = New Size(739, 532)
+        dgvSearchAttendance.Size = New Size(718, 532)
         dgvSearchAttendance.TabIndex = 28
         ' 
         ' btnSearchAttendance
@@ -591,9 +591,12 @@ Partial Class formAdminDash
         ' 
         ' dtpSearchAttendanceDate
         ' 
+        dtpSearchAttendanceDate.CalendarFont = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpSearchAttendanceDate.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpSearchAttendanceDate.Location = New Point(13, 361)
         dtpSearchAttendanceDate.Name = "dtpSearchAttendanceDate"
-        dtpSearchAttendanceDate.Size = New Size(203, 29)
+        dtpSearchAttendanceDate.ShowCheckBox = True
+        dtpSearchAttendanceDate.Size = New Size(234, 25)
         dtpSearchAttendanceDate.TabIndex = 26
         ' 
         ' Label20
@@ -613,7 +616,7 @@ Partial Class formAdminDash
         ' 
         txtLName.Location = New Point(13, 291)
         txtLName.Name = "txtLName"
-        txtLName.Size = New Size(203, 29)
+        txtLName.Size = New Size(234, 29)
         txtLName.TabIndex = 24
         ' 
         ' Label19
@@ -633,7 +636,7 @@ Partial Class formAdminDash
         ' 
         txtFName.Location = New Point(13, 216)
         txtFName.Name = "txtFName"
-        txtFName.Size = New Size(203, 29)
+        txtFName.Size = New Size(234, 29)
         txtFName.TabIndex = 22
         ' 
         ' Label18
@@ -653,7 +656,7 @@ Partial Class formAdminDash
         ' 
         txtEmpID.Location = New Point(13, 138)
         txtEmpID.Name = "txtEmpID"
-        txtEmpID.Size = New Size(203, 29)
+        txtEmpID.Size = New Size(234, 29)
         txtEmpID.TabIndex = 20
         ' 
         ' Label17
