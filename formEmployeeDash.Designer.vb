@@ -23,7 +23,7 @@ Partial Class formEmployeeDash
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         EmployeePanel = New Panel()
-        btnHide = New Button()
+        btnNewInstance = New Button()
         Label1 = New Label()
         Label2 = New Label()
         btnEmployeeAttendance = New Button()
@@ -33,24 +33,27 @@ Partial Class formEmployeeDash
         btnExit = New Button()
         pnlEmpAttendance = New Panel()
         Label14 = New Label()
-        DataGridView1 = New DataGridView()
+        dgvAttendance = New DataGridView()
         searchID = New DataGridViewTextBoxColumn()
         searchName = New DataGridViewTextBoxColumn()
         searchTimeIn = New DataGridViewTextBoxColumn()
         searchTimeOut = New DataGridViewTextBoxColumn()
         btnSearchAttendance = New Button()
-        DateTimePicker1 = New DateTimePicker()
+        dtpAttendance = New DateTimePicker()
         Label16 = New Label()
+        pnlNewInstance = New Panel()
+        Label3 = New Label()
         EmployeePanel.SuspendLayout()
         pnlTitleBar.SuspendLayout()
         pnlEmpAttendance.SuspendLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(dgvAttendance, ComponentModel.ISupportInitialize).BeginInit()
+        pnlNewInstance.SuspendLayout()
         SuspendLayout()
         ' 
         ' EmployeePanel
         ' 
         EmployeePanel.BackColor = Color.FromArgb(CByte(31), CByte(32), CByte(48))
-        EmployeePanel.Controls.Add(btnHide)
+        EmployeePanel.Controls.Add(btnNewInstance)
         EmployeePanel.Controls.Add(Label1)
         EmployeePanel.Controls.Add(Label2)
         EmployeePanel.Controls.Add(btnEmployeeAttendance)
@@ -61,22 +64,22 @@ Partial Class formEmployeeDash
         EmployeePanel.Size = New Size(241, 688)
         EmployeePanel.TabIndex = 3
         ' 
-        ' btnHide
+        ' btnNewInstance
         ' 
-        btnHide.Anchor = AnchorStyles.None
-        btnHide.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
-        btnHide.FlatStyle = FlatStyle.Popup
-        btnHide.Location = New Point(19, 268)
-        btnHide.Margin = New Padding(3, 4, 3, 4)
-        btnHide.Name = "btnHide"
-        btnHide.Size = New Size(199, 53)
-        btnHide.TabIndex = 11
-        btnHide.Text = "Another Button"
-        btnHide.UseVisualStyleBackColor = False
+        btnNewInstance.Anchor = AnchorStyles.None
+        btnNewInstance.BackColor = Color.FromArgb(CByte(138), CByte(173), CByte(244))
+        btnNewInstance.FlatStyle = FlatStyle.Popup
+        btnNewInstance.Location = New Point(19, 268)
+        btnNewInstance.Margin = New Padding(3, 4, 3, 4)
+        btnNewInstance.Name = "btnNewInstance"
+        btnNewInstance.Size = New Size(199, 53)
+        btnNewInstance.TabIndex = 11
+        btnNewInstance.Text = "Another Button"
+        btnNewInstance.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
-        Label1.BackColor = Color.FromArgb(CByte(73), CByte(77), CByte(100))
+        Label1.BackColor = Color.FromArgb(CByte(53), CByte(57), CByte(80))
         Label1.Font = New Font("Helvetica", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 7)
@@ -115,7 +118,7 @@ Partial Class formEmployeeDash
         ' 
         btnLogout.BackColor = Color.LightPink
         btnLogout.FlatStyle = FlatStyle.Popup
-        btnLogout.Location = New Point(19, 540)
+        btnLogout.Location = New Point(64, 642)
         btnLogout.Margin = New Padding(3, 4, 3, 4)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(109, 33)
@@ -129,7 +132,7 @@ Partial Class formEmployeeDash
         pnlTitleBar.BackColor = Color.FromArgb(CByte(24), CByte(25), CByte(38))
         pnlTitleBar.Controls.Add(Label22)
         pnlTitleBar.Controls.Add(btnExit)
-        pnlTitleBar.Location = New Point(-2, -1)
+        pnlTitleBar.Location = New Point(0, 0)
         pnlTitleBar.Name = "pnlTitleBar"
         pnlTitleBar.Size = New Size(1225, 31)
         pnlTitleBar.TabIndex = 18
@@ -162,9 +165,9 @@ Partial Class formEmployeeDash
         ' 
         pnlEmpAttendance.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         pnlEmpAttendance.Controls.Add(Label14)
-        pnlEmpAttendance.Controls.Add(DataGridView1)
+        pnlEmpAttendance.Controls.Add(dgvAttendance)
         pnlEmpAttendance.Controls.Add(btnSearchAttendance)
-        pnlEmpAttendance.Controls.Add(DateTimePicker1)
+        pnlEmpAttendance.Controls.Add(dtpAttendance)
         pnlEmpAttendance.Controls.Add(Label16)
         pnlEmpAttendance.Location = New Point(233, 28)
         pnlEmpAttendance.Name = "pnlEmpAttendance"
@@ -185,15 +188,15 @@ Partial Class formEmployeeDash
         Label14.TabIndex = 30
         Label14.Text = "> Attendance <"
         ' 
-        ' DataGridView1
+        ' dgvAttendance
         ' 
-        DataGridView1.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {searchID, searchName, searchTimeIn, searchTimeOut})
-        DataGridView1.Location = New Point(15, 68)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.Size = New Size(960, 572)
-        DataGridView1.TabIndex = 29
+        dgvAttendance.BackgroundColor = Color.FromArgb(CByte(91), CByte(96), CByte(120))
+        dgvAttendance.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvAttendance.Columns.AddRange(New DataGridViewColumn() {searchID, searchName, searchTimeIn, searchTimeOut})
+        dgvAttendance.Location = New Point(15, 68)
+        dgvAttendance.Name = "dgvAttendance"
+        dgvAttendance.Size = New Size(960, 572)
+        dgvAttendance.TabIndex = 29
         ' 
         ' searchID
         ' 
@@ -235,12 +238,12 @@ Partial Class formEmployeeDash
         btnSearchAttendance.Text = "Search"
         btnSearchAttendance.UseVisualStyleBackColor = False
         ' 
-        ' DateTimePicker1
+        ' dtpAttendance
         ' 
-        DateTimePicker1.Location = New Point(168, 26)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(292, 29)
-        DateTimePicker1.TabIndex = 20
+        dtpAttendance.Location = New Point(168, 26)
+        dtpAttendance.Name = "dtpAttendance"
+        dtpAttendance.Size = New Size(292, 29)
+        dtpAttendance.TabIndex = 20
         ' 
         ' Label16
         ' 
@@ -255,6 +258,26 @@ Partial Class formEmployeeDash
         Label16.TabIndex = 19
         Label16.Text = "Search Date:"
         ' 
+        ' pnlNewInstance
+        ' 
+        pnlNewInstance.Controls.Add(Label3)
+        pnlNewInstance.Location = New Point(233, 28)
+        pnlNewInstance.Name = "pnlNewInstance"
+        pnlNewInstance.Size = New Size(987, 652)
+        pnlNewInstance.TabIndex = 31
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.BackColor = Color.Transparent
+        Label3.Font = New Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(430, 297)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(152, 37)
+        Label3.TabIndex = 0
+        Label3.Text = "New Panel"
+        ' 
         ' formEmployeeDash
         ' 
         AutoScaleDimensions = New SizeF(9F, 21F)
@@ -263,6 +286,7 @@ Partial Class formEmployeeDash
         ClientSize = New Size(1220, 680)
         Controls.Add(EmployeePanel)
         Controls.Add(pnlTitleBar)
+        Controls.Add(pnlNewInstance)
         Controls.Add(pnlEmpAttendance)
         Font = New Font("Segoe UI", 12F)
         FormBorderStyle = FormBorderStyle.None
@@ -276,7 +300,9 @@ Partial Class formEmployeeDash
         pnlTitleBar.PerformLayout()
         pnlEmpAttendance.ResumeLayout(False)
         pnlEmpAttendance.PerformLayout()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
+        CType(dgvAttendance, ComponentModel.ISupportInitialize).EndInit()
+        pnlNewInstance.ResumeLayout(False)
+        pnlNewInstance.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -290,13 +316,15 @@ Partial Class formEmployeeDash
     Friend WithEvents btnExit As Button
     Friend WithEvents pnlEmpAttendance As Panel
     Friend WithEvents Label16 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpAttendance As DateTimePicker
     Friend WithEvents btnSearchAttendance As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvAttendance As DataGridView
     Friend WithEvents searchID As DataGridViewTextBoxColumn
     Friend WithEvents searchName As DataGridViewTextBoxColumn
     Friend WithEvents searchTimeIn As DataGridViewTextBoxColumn
     Friend WithEvents searchTimeOut As DataGridViewTextBoxColumn
-    Friend WithEvents btnHide As Button
+    Friend WithEvents btnNewInstance As Button
     Friend WithEvents Label14 As Label
+    Friend WithEvents pnlNewInstance As Panel
+    Friend WithEvents Label3 As Label
 End Class

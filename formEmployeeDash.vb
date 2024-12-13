@@ -2,6 +2,7 @@
 
     Private Sub formMain_Load(sender As Object, e As EventArgs) Handles Me.Load
         pnlEmpAttendance.Hide()
+        pnlNewInstance.Hide()
     End Sub
 
 
@@ -46,10 +47,12 @@
     ' Button Clicks
 
     Private Sub btnEmployeeAttendance_Click(sender As Object, e As EventArgs) Handles btnEmployeeAttendance.Click
+        pnlNewInstance.Hide()
         pnlEmpAttendance.Show()
     End Sub
 
-    Private Sub btnHide_Click(sender As Object, e As EventArgs) Handles btnHide.Click
+    Private Sub btnNewInstance_Click(sender As Object, e As EventArgs) Handles btnNewInstance.Click
         pnlEmpAttendance.Hide()
+        pnlNewInstance.Show()
     End Sub
 End Class

@@ -110,7 +110,7 @@ Partial Class formAdminDash
         ' 
         ' Label1
         ' 
-        Label1.BackColor = Color.FromArgb(CByte(73), CByte(77), CByte(100))
+        Label1.BackColor = Color.FromArgb(CByte(53), CByte(57), CByte(80))
         Label1.Font = New Font("Helvetica", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 7)
@@ -214,7 +214,7 @@ Partial Class formAdminDash
         ' 
         btnLogout.BackColor = Color.LightPink
         btnLogout.FlatStyle = FlatStyle.Popup
-        btnLogout.Location = New Point(20, 608)
+        btnLogout.Location = New Point(64, 642)
         btnLogout.Margin = New Padding(3, 4, 3, 4)
         btnLogout.Name = "btnLogout"
         btnLogout.Size = New Size(109, 33)

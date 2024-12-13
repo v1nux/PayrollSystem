@@ -26,7 +26,6 @@ Partial Class formLogin
         txtPassword = New TextBox()
         btnLogin = New Button()
         pnlLoginForm = New Panel()
-        linkForgot = New LinkLabel()
         Label4 = New Label()
         Label3 = New Label()
         Label2 = New Label()
@@ -41,10 +40,9 @@ Partial Class formLogin
         Label7 = New Label()
         Label6 = New Label()
         Label9 = New Label()
-        Label10 = New Label()
         pnlTitleBar = New Panel()
-        btnExit = New Button()
         Label22 = New Label()
+        btnExit = New Button()
         pnlLoginForm.SuspendLayout()
         Panel2.SuspendLayout()
         pnlForgotCred.SuspendLayout()
@@ -85,7 +83,6 @@ Partial Class formLogin
         ' 
         pnlLoginForm.BackColor = Color.FromArgb(CByte(36), CByte(39), CByte(58))
         pnlLoginForm.BorderStyle = BorderStyle.FixedSingle
-        pnlLoginForm.Controls.Add(linkForgot)
         pnlLoginForm.Controls.Add(Label4)
         pnlLoginForm.Controls.Add(Label3)
         pnlLoginForm.Controls.Add(Label2)
@@ -98,20 +95,6 @@ Partial Class formLogin
         pnlLoginForm.Name = "pnlLoginForm"
         pnlLoginForm.Size = New Size(695, 404)
         pnlLoginForm.TabIndex = 3
-        ' 
-        ' linkForgot
-        ' 
-        linkForgot.ActiveLinkColor = Color.Red
-        linkForgot.AutoSize = True
-        linkForgot.BackColor = Color.Transparent
-        linkForgot.LinkColor = Color.FromArgb(CByte(238), CByte(153), CByte(160))
-        linkForgot.Location = New Point(532, 329)
-        linkForgot.Name = "linkForgot"
-        linkForgot.Size = New Size(109, 15)
-        linkForgot.TabIndex = 8
-        linkForgot.TabStop = True
-        linkForgot.Text = "Forgot Credentials?"
-        linkForgot.VisitedLinkColor = Color.FromArgb(CByte(255), CByte(128), CByte(128))
         ' 
         ' Label4
         ' 
@@ -273,18 +256,6 @@ Partial Class formLogin
         Label9.TabIndex = 9
         Label9.Text = "| Login"
         ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.BackColor = Color.Transparent
-        Label10.Font = New Font("Coolvetica Rg", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label10.ForeColor = Color.FromArgb(CByte(240), CByte(198), CByte(198))
-        Label10.Location = New Point(851, 533)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(36, 29)
-        Label10.TabIndex = 10
-        Label10.Text = "v2"
-        ' 
         ' pnlTitleBar
         ' 
         pnlTitleBar.BackColor = Color.FromArgb(CByte(24), CByte(25), CByte(38))
@@ -294,6 +265,17 @@ Partial Class formLogin
         pnlTitleBar.Name = "pnlTitleBar"
         pnlTitleBar.Size = New Size(885, 28)
         pnlTitleBar.TabIndex = 18
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label22.ForeColor = Color.WhiteSmoke
+        Label22.Location = New Point(14, 8)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(124, 13)
+        Label22.TabIndex = 19
+        Label22.Text = "Payroll System (Login)"
         ' 
         ' btnExit
         ' 
@@ -308,17 +290,6 @@ Partial Class formLogin
         btnExit.Text = "X"
         btnExit.UseVisualStyleBackColor = False
         ' 
-        ' Label22
-        ' 
-        Label22.AutoSize = True
-        Label22.Font = New Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label22.ForeColor = Color.WhiteSmoke
-        Label22.Location = New Point(14, 8)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(124, 13)
-        Label22.TabIndex = 19
-        Label22.Text = "Payroll System (Login)"
-        ' 
         ' formLogin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -330,7 +301,6 @@ Partial Class formLogin
         Controls.Add(pnlLoginForm)
         Controls.Add(pnlForgotCred)
         Controls.Add(pnlTitleBar)
-        Controls.Add(Label10)
         Controls.Add(Label9)
         FormBorderStyle = FormBorderStyle.None
         MaximizeBox = False
@@ -357,7 +327,6 @@ Partial Class formLogin
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents linkForgot As LinkLabel
     Friend WithEvents pnlForgotCred As Panel
     Friend WithEvents txtForgotCreds As TextBox
     Friend WithEvents Label7 As Label
@@ -368,7 +337,6 @@ Partial Class formLogin
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
     Friend WithEvents pnlTitleBar As Panel
     Friend WithEvents btnExit As Button
     Friend WithEvents Label22 As Label

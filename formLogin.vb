@@ -67,10 +67,10 @@ Public Class formLogin
     End Sub
     ' -----------------------------------------------------------------------------------------------------------------------------------------------------------
     ' Button Clicks
-    Private Sub linkForgot_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles linkForgot.LinkClicked
-        pnlLoginForm.Hide()
-        pnlForgotCred.Show()
-    End Sub
+    'Private Sub linkForgot_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs)
+    '    pnlLoginForm.Hide()
+    '    pnlForgotCred.Show()
+    'End Sub
 
     Private Sub btnCredReset_Click(sender As Object, e As EventArgs) Handles btnCredReset.Click
         If String.IsNullOrWhiteSpace(txtForgotCreds.Text) Then
