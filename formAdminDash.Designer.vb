@@ -592,6 +592,7 @@ Partial Class formAdminDash
         ' dtpSearchAttendanceDate
         ' 
         dtpSearchAttendanceDate.CalendarFont = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        dtpSearchAttendanceDate.Checked = False
         dtpSearchAttendanceDate.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         dtpSearchAttendanceDate.Location = New Point(13, 361)
         dtpSearchAttendanceDate.Name = "dtpSearchAttendanceDate"

@@ -46,7 +46,7 @@ Public Class formAdminDash
 
         SQLConnect.databaseConnect()
 
-        query = "SELECT empID, FirstName, LastName, Shifts FROM empLogs WHERE 1=1"
+        query = "SELECT empID, TimeIn, TimeOut, FirstName, LastName, Shifts FROM empLogs WHERE 1=1"
 
         If Not String.IsNullOrWhiteSpace(txtEmpID.Text) Then
             query &= " AND empID = @empID"
@@ -90,13 +90,18 @@ Public Class formAdminDash
 
             If dataTable.Rows.Count > 0 Then
                 dgvSearchAttendance.DataSource = dataTable
+
                 dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
+                dgvSearchAttendance.Columns("TimeIn").HeaderText = "Time In"
+                dgvSearchAttendance.Columns("TimeOut").HeaderText = "Time Out"
                 dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
                 dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
                 dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
 
+                dgvSearchAttendance.Columns("empID").Width = 120
+                dgvSearchAttendance.Columns("TimeIn").Width = 100
+                dgvSearchAttendance.Columns("TimeOut").Width = 100
                 dgvSearchAttendance.Columns("Shifts").Width = 200
-
             Else
                 MessageBox.Show("No results found.")
             End If
@@ -139,4 +144,5 @@ Public Class formAdminDash
     Private Sub formAdminDash_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Application.Exit()
     End Sub
+
 End Class

@@ -38,7 +38,7 @@ Public Class formEmployeeDash
         Try
             personalID = userSession.CurrentUserPersonalID
 
-            query = "SELECT emp.empID, emp.FirstName, emp.LastName, emp.Shifts " &
+            query = "SELECT emp.empID, emp.TimeIn, emp.TimeOut, emp.FirstName, emp.LastName, emp.Shifts " &
                               "FROM empLogs emp " &
                               "INNER JOIN loginCreds loginCreds ON emp.empID = loginCreds.personalID " &
                               "WHERE loginCreds.personalID = @personalID"
@@ -56,13 +56,18 @@ Public Class formEmployeeDash
 
             If dataTable.Rows.Count > 0 Then
                 dgvSearchAttendance.DataSource = dataTable
+
                 dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
+                dgvSearchAttendance.Columns("TimeIn").HeaderText = "Time In"
+                dgvSearchAttendance.Columns("TimeOut").HeaderText = "Time Out"
                 dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
                 dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
                 dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
 
+                dgvSearchAttendance.Columns("empID").Width = 120
+                dgvSearchAttendance.Columns("TimeIn").Width = 100
+                dgvSearchAttendance.Columns("TimeOut").Width = 100
                 dgvSearchAttendance.Columns("Shifts").Width = 200
-                dgvSearchAttendance.Columns("empID").Width = 200
             Else
                 MessageBox.Show("No records found.")
             End If
@@ -82,7 +87,7 @@ Public Class formEmployeeDash
         Try
             personalID = userSession.CurrentUserPersonalID
 
-            query = "SELECT emp.empID, emp.FirstName, emp.LastName, emp.Shifts " &
+            query = "SELECT emp.empID, emp.TimeIn, emp.TimeOut, emp.FirstName, emp.LastName, emp.Shifts " &
                               "FROM empLogs emp " &
                               "INNER JOIN loginCreds loginCreds ON emp.empID = loginCreds.personalID " &
                               "WHERE loginCreds.personalID = @personalID"
@@ -107,13 +112,18 @@ Public Class formEmployeeDash
 
             If dataTable.Rows.Count > 0 Then
                 dgvSearchAttendance.DataSource = dataTable
+
                 dgvSearchAttendance.Columns("empID").HeaderText = "Employee ID"
+                dgvSearchAttendance.Columns("TimeIn").HeaderText = "Time In"
+                dgvSearchAttendance.Columns("TimeOut").HeaderText = "Time Out"
                 dgvSearchAttendance.Columns("FirstName").HeaderText = "First Name"
                 dgvSearchAttendance.Columns("LastName").HeaderText = "Last Name"
                 dgvSearchAttendance.Columns("Shifts").HeaderText = "Shifts"
 
+                dgvSearchAttendance.Columns("empID").Width = 120
+                dgvSearchAttendance.Columns("TimeIn").Width = 100
+                dgvSearchAttendance.Columns("TimeOut").Width = 100
                 dgvSearchAttendance.Columns("Shifts").Width = 200
-                dgvSearchAttendance.Columns("empID").Width = 200
             Else
                 MessageBox.Show("No records found.")
             End If
